@@ -1,0 +1,83 @@
+.post {
+  margin-bottom: 3em;
+}
+
+.post .time {
+  font-size: 0.9em;
+  margin-bottom: 0.8em;
+  color: #ADADAD;
+}
+
+/* Page Nav
+------------------------------------------- */
+
+#page-nav {
+  margin-top: 22px;
+  margin-bottom: 33px;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+#page-nav a {
+  color: #2e2e2e;
+}
+
+#page-nav a:hover {
+  color: #ADADAD;
+}
+
+/* Gist styling
+------------------------------------------- */
+
+.post .gist {
+  margin: 22px 0px;
+  font-size: 0.9em;
+}
+
+.post .gist .gist-file {
+  border: none;
+}
+
+.post .gist .gist-file .gist-data {
+  background-color: #e6e6e6;
+  padding: 10px 15px;
+}
+
+.post .gist .gist-file .gist-highlight {
+  padding: 0;
+}
+
+.post .gist .gist-file .gist-meta {
+  background-color: #e6e6e6;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #bebebe;
+}
+
+.post .gist .gist-file .gist-meta a,
+.post .gist .gist-file .gist-meta a:visited,
+.post .gist .gist-file .gist-meta a:link {
+  text-decoration: none;
+  color: #bebebe !important;
+  border-bottom: none;
+}
+
+
+#container .twitter {
+  background-color: #F9F9F9;
+  padding: 15px 20px;
+}
+
+#container .twitter p {
+  margin: 0;
+  font-family: Helvetica;
+  color: #696969;
+  font-style: italic;
+  font-size: 15px;
+}
+
+#container .thanks {
+  font-style: italic;
+  font-size: 14px;
+  color: gray;
+  margin: 40px 10px 0px 10px;
+}

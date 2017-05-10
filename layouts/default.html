@@ -12,10 +12,10 @@
   <meta name="twitter:title" content="{{ title }}">
   <meta name="twitter:description" content="{{ description }}">
   <meta name="twitter:image:src" content="{{site.url}}{% if page.poster %}{{ page.poster }}{% else %}{{ 'DEFAULTURL' }}{% endif %}">
-  <link href='https://fonts.googleapis.com/css?family=Merriweather:400,400italic,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/{{ fingerprint.[css/app.css] }}">
   {{> analytics }}
 </head>
-<body{% if page.bodyID %} id="{{page.bodyID}}"{% endif %}>
+<body{{#if bodyID}} id="{{bodyID}}"{{/if}}>
   {{> menu }}
   <div id="container">
     {{{ contents }}}

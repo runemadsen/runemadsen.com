@@ -3,6 +3,8 @@ var collections = require('metalsmith-collections');
 var layouts     = require('metalsmith-layouts');
 var markdown    = require('metalsmith-markdown');
 var permalinks  = require('metalsmith-permalinks');
+var sass        = require('metalsmith-sass');
+var fingerprint = require('metalsmith-fingerprint-ignore')
 
 var production = process.argv[2] == 'production'
 
@@ -24,6 +26,9 @@ var build = Metalsmith(__dirname)
     work: 'work/*.md'
   }))
   .use(markdown())
+  .use(sass({
+    outputStyle: production ? "compressed" : "expanded"
+  }))
   .use(permalinks({
     relative: false,
     pattern: ':title'//,
@@ -35,11 +40,13 @@ var build = Metalsmith(__dirname)
     //   pattern: 'work/:title'
     // }]
   }))
+  .use(fingerprint({ pattern: 'css/app.css' }))
   .use(layouts({
     engine: 'handlebars',
     partials: 'layouts/partials',
     partialExtension: ".html"
   }))
+
 
 // Production
 // --------------------------------------------
@@ -53,17 +60,17 @@ if(production) {
 
 else {
 
-  var watch = require('metalsmith-watch');
-
-  build = build.use(
-    watch({
-      paths: {
-        "src/**/*": true,
-        "layouts/**/*": true
-      },
-      livereload: false
-    })
-  );
+  // var watch = require('metalsmith-watch');
+  //
+  // build = build.use(
+  //   watch({
+  //     paths: {
+  //       "src/**/*": true,
+  //       "layouts/**/*": true
+  //     },
+  //     livereload: false
+  //   })
+  // );
 
 }
 

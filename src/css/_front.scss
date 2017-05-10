@@ -1,0 +1,16 @@
+#front .wide-750:first-of-type {
+  margin-top: 2.5em;
+}
+
+#front .wide-750 img {
+  float: left;
+  width: 50%;
+}
+
+#front .wide-750:after { 
+   content: "."; 
+   visibility: hidden; 
+   display: block; 
+   height: 0; 
+   clear: both;
+}
