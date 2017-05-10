@@ -5,7 +5,7 @@ date:       2015-02-15 19:41:00
 categories: blog
 description: "The rise of the meta-designer, and the use of algorithmic design systems."
 keywords: "graphic, design, systems, creative, code, algorithms"
-poster: blog/vw.jpg
+poster: https://assets.runemadsen.com/blog/vw.jpg
 ---
 
 <div class="wide-750">

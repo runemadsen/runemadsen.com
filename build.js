@@ -5,10 +5,11 @@ var markdown    = require('metalsmith-markdown');
 var permalinks  = require('metalsmith-permalinks');
 var sass        = require('metalsmith-sass');
 var fingerprint = require('metalsmith-fingerprint-ignore');
-var dateInFilename = require('metalsmith-date-in-filename');
+var filenameMetadata = require('metalsmith-metadata-in-filename');
 var moment = require('moment');
 var paginate = require('metalsmith-pager');
 var inplace = require('metalsmith-in-place');
+var debug = require('metalsmith-debug');
 
 var production = process.argv[2] == 'production';
 
@@ -25,15 +26,20 @@ Handlebars.registerHelper('removeFilename', function (str) {
   return str.substring(0, str.lastIndexOf("/"));
 });
 
+Handlebars.registerHelper('debug', function (obj) {
+  console.log(obj)
+});
+
 // Defaults
 // --------------------------------------------
 
 var build = Metalsmith(__dirname)
+  .use(debug())
   .metadata({
     sitename: "Rune Madsen",
     siteurl: "https://runemadsen.com/",
     description: "Rune Madsen is a designer, artist and educator who uses programming languages to create things with the computer.",
-    keyword: "algorithmic, graphic, design, systems, generative, rune, madsen, Processing, creative, code, programming, P5.js"
+    keyword: "algorithmic, graphic, design, systems, generative, Processing, creative, code, programming, P5.js"
   })
   .source('./src')
   .destination('./build')
@@ -45,7 +51,9 @@ var build = Metalsmith(__dirname)
       reverse: true
     },
     work: {
-      pattern: 'work/*.md'
+      pattern: 'work/*.md',
+      sortBy: 'date',
+      reverse: true
     }
   }))
   .use(paginate({
@@ -56,7 +64,9 @@ var build = Metalsmith(__dirname)
     paginationTemplatePath: '../layouts/partials/blogPagination.html',
     layoutName: 'default.html'
   }))
-  .use(dateInFilename())
+  .use(filenameMetadata({
+    match: '**/*.md'
+  }))
   .use(markdown())
   .use(sass({
     outputStyle: production ? "compressed" : "expanded"
@@ -66,10 +76,10 @@ var build = Metalsmith(__dirname)
     pattern: ':title',
     linksets: [{
       match: { collection: 'blog' },
-      pattern: 'blog/:title'
+      pattern: 'blog/:slug'
     },{
       match: { collection: 'work' },
-      pattern: 'work/:title'
+      pattern: 'work/:slug'
     }]
   }))
   // Run handlebars on any individual pages,
