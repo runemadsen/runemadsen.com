@@ -4,9 +4,26 @@ var layouts     = require('metalsmith-layouts');
 var markdown    = require('metalsmith-markdown');
 var permalinks  = require('metalsmith-permalinks');
 var sass        = require('metalsmith-sass');
-var fingerprint = require('metalsmith-fingerprint-ignore')
+var fingerprint = require('metalsmith-fingerprint-ignore');
+var dateInFilename = require('metalsmith-date-in-filename');
+var moment = require('moment');
+var paginate = require('metalsmith-pager');
+var inplace = require('metalsmith-in-place');
 
-var production = process.argv[2] == 'production'
+var production = process.argv[2] == 'production';
+
+// Helpers
+// --------------------------------------------
+
+var Handlebars = require('handlebars');
+Handlebars.registerHelper('formatDate', function (date, format) {
+  var mmnt = moment(date);
+  return mmnt.format(format);
+});
+
+Handlebars.registerHelper('removeFilename', function (str) {
+  return str.substring(0, str.lastIndexOf("/"));
+});
 
 // Defaults
 // --------------------------------------------
@@ -22,23 +39,46 @@ var build = Metalsmith(__dirname)
   .destination('./build')
   .clean(true)
   .use(collections({
-    blog: 'blog/*.md',
-    work: 'work/*.md'
+    blog: {
+      pattern: 'blog/*.md',
+      sortBy: 'date',
+      reverse: true
+    },
+    work: {
+      pattern: 'work/*.md'
+    }
   }))
+  .use(paginate({
+    collection: 'blog',
+    elementsPerPage: 5,
+    pagePattern: 'blog/page:PAGE/index.html.hbs',
+    index: 'blog/index.html.hbs',
+    paginationTemplatePath: '../layouts/partials/blogPagination.html',
+    layoutName: 'default.html'
+  }))
+  .use(dateInFilename())
   .use(markdown())
   .use(sass({
     outputStyle: production ? "compressed" : "expanded"
   }))
   .use(permalinks({
     relative: false,
-    pattern: ':title'//,
-    // linksets: [{
-    //   match: { collection: 'blog' },
-    //   pattern: 'blog/:title'
-    // },{
-    //   match: { collection: 'work' },
-    //   pattern: 'work/:title'
-    // }]
+    pattern: ':title',
+    linksets: [{
+      match: { collection: 'blog' },
+      pattern: 'blog/:title'
+    },{
+      match: { collection: 'work' },
+      pattern: 'work/:title'
+    }]
+  }))
+  // Run handlebars on any individual pages,
+  // especially the pagination pages named .html.hbs
+  .use(inplace({
+    engineOptions: {
+      partials: './layouts/partials',
+      cache: false
+    }
   }))
   .use(fingerprint({ pattern: 'css/app.css' }))
   .use(layouts({

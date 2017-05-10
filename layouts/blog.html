@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {{> head }}
+</head>
+<body>
+  {{> menu }}
+  <div id="container">
+    <section class="post">
+      <div class="time">{{formatDate date "DD MMMM, YYYY" }}</div>
+      <h1>{{ title }}</h1>
+      {{{ contents }}}
+      <div class="twitter"><p>If you want to share or comment on this post, ping <a href="https://www.twitter.com/runemadsen">@runemadsen</a> on Twitter</p></div>
+    </section>
+  </div>
+</body>
+</html>
