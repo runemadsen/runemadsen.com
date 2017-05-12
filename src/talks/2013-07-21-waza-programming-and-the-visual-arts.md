@@ -7,7 +7,7 @@ excerpt: |
 poster: https://assets.runemadsen.com/work/waza.jpg
 ---
 
-I had the pleasure of speaking at Heroku's developer event "Waza" earlier this year.
+I had the pleasure of speaking at Heroku's developer event "Waza"in 2013.
 
 <div class="wide-750">
   <iframe frameborder='0' height='423' src='https://player.vimeo.com/video/61113159?byline=0&amp;title=0&amp;portrait=0&amp;color=ffd663' width='750'> </iframe>
@@ -18,8 +18,6 @@ During the last decade, the line between a "designer" and a "developer" has obvi
 If you gain experience in both professions you'll realize that this divide is problematic. There is as much algorithm in graphic design as there is aesthetics in programming. Grid systems are just measurements. Typography is essentially vertex manipulation. Color schemes are basic math performed on the color spectrum.
 
 This talk explores what happens when we start to approach graphic design only through code. Based on the curriculum of the graduate class "Printing Code", taught at the Interactive Telecommunications Program in New York, we'll investigate the history of computational design, contemporary artists working in generative design, alongside practical code-based examples using the Java-based framework Processing.
-
-You can find the slides and a collection of links gathered for this talk at [bit.ly/printingcode](http://bit.ly/printingcode).
 
 <div class="wide-750">
   <img src="https://assets.runemadsen.com/work/waza.jpg" />
