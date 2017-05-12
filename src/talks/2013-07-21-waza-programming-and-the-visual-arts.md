@@ -3,8 +3,7 @@ layout: work.html
 title: Programming and the Visual Arts
 date: 2013-07-21 22:00:00
 excerpt: |
-  This talk explores what happens when we start to approach graphic design only through code. Based on the curriculum of the graduate class "Printing Code", taught at the Interactive Telecommunications Program in New York, it investigates the history of computational design, contemporary artists working in generative design, alongside practical code-based examples using the Java-based framework Processing.
-categories: work
+  This talk explores what happens when we start to approach graphic design through code. Based on the curriculum of the graduate class "Printing Code", taught at the Interactive Telecommunications Program in New York, it investigates the history of computational design, contemporary artists working in generative design, alongside practical code-based examples using the Java-based framework Processing.
 poster: https://assets.runemadsen.com/work/waza.jpg
 ---
 
@@ -25,4 +24,3 @@ You can find the slides and a collection of links gathered for this talk at [bit
 <div class="wide-750">
   <img src="https://assets.runemadsen.com/work/waza.jpg" />
 </div>
-

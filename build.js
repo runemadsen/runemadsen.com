@@ -54,6 +54,11 @@ var build = Metalsmith(__dirname)
       pattern: 'work/*.md',
       sortBy: 'date',
       reverse: true
+    },
+    talks: {
+      pattern: ['talks/*.md', 'talks/*.html'],
+      sortBy: 'date',
+      reverse: true
     }
   }))
   .use(paginate({
@@ -74,13 +79,20 @@ var build = Metalsmith(__dirname)
   .use(permalinks({
     relative: false,
     pattern: ':title',
-    linksets: [{
-      match: { collection: 'blog' },
-      pattern: 'blog/:slug'
-    },{
-      match: { collection: 'work' },
-      pattern: 'work/:slug'
-    }]
+    linksets: [
+      {
+        match: { collection: 'blog' },
+        pattern: 'blog/:slug'
+      },
+      {
+        match: { collection: 'work' },
+        pattern: 'work/:slug'
+      },
+      {
+        match: { collection: 'talks' },
+        pattern: 'talks/:slug'
+      }
+    ]
   }))
   // Run handlebars on any individual pages,
   // especially the pagination pages named .html.hbs
@@ -102,6 +114,13 @@ var build = Metalsmith(__dirname)
 // --------------------------------------------
 
 if(production) {
+
+  var htmlMinifier = require("metalsmith-html-minifier");
+
+  build = build.use(htmlMinifier({
+    removeAttributeQuotes: false,
+    removeRedundantAttributes: false
+  }))
 
 }
 

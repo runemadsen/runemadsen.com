@@ -1,0 +1,15 @@
+---
+layout: default.html
+---
+
+<h1>Talks</h1>
+
+{{#each collections.talks }}
+  <section class="talk">
+    <a href="/{{ path }}"><h2>{{ title }}</h2></a>
+    <div class="wide-750">
+      <a href="/{{ path }}"><img src="{{ poster }}" alt="{{ title }}" /></a>
+    </div>
+    <p>{{ excerpt }} <a href="/{{ path }}">Continue reading...</a></p>
+  </section>
+{{/each}}
