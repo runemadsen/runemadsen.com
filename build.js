@@ -59,6 +59,11 @@ var build = Metalsmith(__dirname)
       pattern: ['talks/*.md', 'talks/*.html'],
       sortBy: 'date',
       reverse: true
+    },
+    syllabi: {
+      pattern: ['syllabi/*.md'],
+      sortBy: 'date',
+      reverse: true
     }
   }))
   .use(paginate({
@@ -70,7 +75,7 @@ var build = Metalsmith(__dirname)
     layoutName: 'default.html'
   }))
   .use(filenameMetadata({
-    match: '**/*.md'
+    match: '**/*.{md,html}'
   }))
   .use(markdown())
   .use(sass({
@@ -78,7 +83,7 @@ var build = Metalsmith(__dirname)
   }))
   .use(permalinks({
     relative: false,
-    pattern: ':title',
+    pattern: ':slug',
     linksets: [
       {
         match: { collection: 'blog' },
@@ -91,6 +96,10 @@ var build = Metalsmith(__dirname)
       {
         match: { collection: 'talks' },
         pattern: 'talks/:slug'
+      },
+      {
+        match: { collection: 'syllabi' },
+        pattern: 'syllabi/:slug'
       }
     ]
   }))

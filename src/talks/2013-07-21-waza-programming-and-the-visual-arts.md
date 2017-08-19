@@ -1,5 +1,5 @@
 ---
-layout: work.html
+layout: talk.html
 title: Programming and the Visual Arts
 date: 2013-07-21 22:00:00
 excerpt: |
@@ -7,7 +7,7 @@ excerpt: |
 poster: https://assets.runemadsen.com/work/waza.jpg
 ---
 
-I had the pleasure of speaking at Heroku's developer event "Waza"in 2013.
+_This is a video of a talk given at the Heroku Waza conference in 2013._
 
 <div class="wide-750">
   <iframe frameborder='0' height='423' src='https://player.vimeo.com/video/61113159?byline=0&amp;title=0&amp;portrait=0&amp;color=ffd663' width='750'> </iframe>
