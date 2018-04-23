@@ -4,10 +4,14 @@ body {
   color: #2e2e2e;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   text-rendering: optimizelegibility;
   font-weight: bold;
-  font-family: "Helvetica Neue", Helvetica, serif;
 }
 
 h1 {
@@ -33,26 +37,28 @@ h4 {
   line-height: 26px;
 }
 
-#container p,
-#container ul,
-#container ol,
-#container ul, {
+main p,
+main ul,
+main ol,
+main ul {
   margin-bottom: 1.2em;
   line-height: 1.5em;
   font-size: 1.1em;
 }
 
-a {
+main a {
   text-decoration: none;
-  color: #2D97C0;
+  color: #2e2e2e;
+  border-bottom: 1px solid #545454;
+  transition: color 300ms;
 }
 
-a:visited {
-  color: #7A4E9C;
+main a:visited {
+  color: #7a4e9c;
 }
 
-a:hover {
-  color: #ACCAD6;
+main a:hover {
+  color: gray;
 }
 
 a h2 {
@@ -60,32 +66,16 @@ a h2 {
 }
 
 a h2:hover {
-  color: #ADADAD;
-}
-
-h1.underline, #printing-code-body h1 {
-  line-height: 25px;
-  margin-bottom: 15px;
-  border-bottom: 3px solid #2e2e2e;
-  padding-bottom: 15px;
-}
-
-h2.underline, #printing-code-body h2 {
-  line-height: 25px;
-  margin-top: 20px;
-  margin-bottom: 15px;
-  border-bottom: 2px solid #2e2e2e;
-  padding-bottom: 12px;
+  color: #adadad;
 }
 
 blockquote {
-
   padding: 20px;
   margin: 22px 0px;
   background-color: #e6e6e6;
 }
 
-#container blockquote p {
+main blockquote p {
   margin: 0;
   line-height: 1.6em;
   color: #3a3a3a;
@@ -99,30 +89,11 @@ address {
   line-height: 20px;
 }
 
-ul, ol {
+ul,
+ol {
   line-height: 22px;
   margin: 11px 0px;
   margin-left: 25px;
-}
-
-ul.options {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  line-height: 12px;
-}
-
-ul.options li {
-  font-size: 11px;
-  font-weight: bold;
-  padding-top: 17px;
-  padding-bottom: 3px;
-  border-bottom: 1px solid #b6b6b6;
-}
-
-ul.options a {
-  color: #4d4c4d;
-  border: none;
 }
 
 ol.bignums {
@@ -132,7 +103,7 @@ ol.bignums {
 
 ol.bignums li {
   clear: both;
-  border-bottom: 1px solid #E8E8E8;
+  border-bottom: 1px solid #e8e8e8;
   padding-bottom: 1em;
   margin-bottom: 1em;
 }
@@ -140,7 +111,7 @@ ol.bignums li {
 ol.bignums .bignum {
   font-family: Helvetica, Arial, sans-serif;
   font-weight: bold;
-  color: #C3C3C3;
+  color: #c3c3c3;
   display: block;
   float: left;
   width: 60px;

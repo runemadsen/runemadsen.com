@@ -5,7 +5,7 @@
 .post .time {
   font-size: 0.9em;
   margin-bottom: 0.8em;
-  color: #ADADAD;
+  color: #adadad;
 }
 
 /* Page Nav
@@ -23,7 +23,7 @@
 }
 
 #page-nav a:hover {
-  color: #ADADAD;
+  color: #adadad;
 }
 
 /* Gist styling
@@ -61,13 +61,12 @@
   border-bottom: none;
 }
 
-
-#container .twitter {
-  background-color: #F9F9F9;
+.twitter {
+  background-color: #f9f9f9;
   padding: 15px 20px;
 }
 
-#container .twitter p {
+.twitter p {
   margin: 0;
   font-family: Helvetica;
   color: #696969;
@@ -75,7 +74,7 @@
   font-size: 15px;
 }
 
-#container .thanks {
+.thanks {
   font-style: italic;
   font-size: 14px;
   color: gray;

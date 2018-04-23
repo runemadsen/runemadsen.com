@@ -1,13 +1,13 @@
 @media print {
-
   body {
     font-size: 0.8em;
   }
 
-  #container {
-    p, ul {
+  main {
+    p,
+    ul {
       line-height: 1.5em;
-          margin-bottom: 0.6em;
+      margin-bottom: 0.6em;
     }
   }
 

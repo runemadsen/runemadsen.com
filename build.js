@@ -10,6 +10,7 @@ var moment = require("moment");
 var paginate = require("metalsmith-pager");
 var inplace = require("metalsmith-in-place");
 var debug = require("metalsmith-debug");
+var serve = require("metalsmith-serve");
 var production = process.argv[2] == "production";
 
 // Helpers
@@ -32,7 +33,17 @@ Handlebars.registerHelper("debug", function(obj) {
 // Defaults
 // --------------------------------------------
 
-var build = Metalsmith(__dirname)
+var build = Metalsmith(__dirname);
+
+if (!production) {
+  build = build.use(
+    serve({
+      port: 1234
+    })
+  );
+}
+
+build = build
   .use(debug())
   .metadata({
     sitename: "Rune Madsen - Designer, Artist, Educator",
@@ -133,9 +144,6 @@ var build = Metalsmith(__dirname)
     })
   );
 
-// Production
-// --------------------------------------------
-
 if (production) {
   var htmlMinifier = require("metalsmith-html-minifier");
 
@@ -146,19 +154,16 @@ if (production) {
     })
   );
 } else {
-  // Development
-  // --------------------------------------------
-  // var watch = require('metalsmith-watch');
-  //
-  // build = build.use(
-  //   watch({
-  //     paths: {
-  //       "src/**/*": true,
-  //       "layouts/**/*": true
-  //     },
-  //     livereload: false
-  //   })
-  // );
+  var watch = require("metalsmith-watch");
+  build = build.use(
+    watch({
+      paths: {
+        "src/**/*": true,
+        "layouts/**/*": true
+      },
+      livereload: false
+    })
+  );
 }
 
 build.build(function(err) {

@@ -15,11 +15,12 @@
     "metalsmith-pager": "^1.2.1",
     "metalsmith-permalinks": "^0.5.0",
     "metalsmith-sass": "^1.4.0",
+    "metalsmith-serve": "0.0.7",
     "metalsmith-watch": "^1.0.3",
     "moment": "^2.18.1"
   },
   "scripts": {
-    "start": "node build.js && http-server ./build -p 1234",
+    "start": "node build.js",
     "deploy": "bash ./deploy.sh"
   }
 }
