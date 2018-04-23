@@ -1,2 +1,13 @@
-Development: `node build.js` then `cd build && http-server . -p 3456`
-Production: `bash deploy.sh`
+# runemadsen.comp
+
+To run in development:
+
+```bash
+$ npm start
+```
+
+To deploy to production:
+
+```bash
+$ npm run deploy
+```
