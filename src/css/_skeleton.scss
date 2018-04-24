@@ -35,7 +35,7 @@ main iframe {
 /* Menu
 ---------------------------------------------------------*/
 
-header {
+nav {
   -webkit-font-smoothing: antialiased;
   text-transform: uppercase;
   font-size: 1.3em;
@@ -44,30 +44,29 @@ header {
   text-align: center;
 }
 
-header a {
+nav a {
   padding: 0;
-  margin: 0 7px 0 0;
+  margin: 0 7px 10px 0;
   display: inline-block;
 }
 
-header a:last-child {
+nav a:last-child {
   margin: 0;
 }
 
-header a,
-header a:hover,
-header a:visited {
+nav a,
+nav a:hover,
+nav a:visited {
   color: #272727;
 }
 
-header a {
+nav a {
   display: inline-block;
   text-decoration: none;
   transition: margin 200ms, color 400ms;
 }
 
-header a:hover {
-  margin-left: 6px;
+nav a:hover {
   color: gray;
 }
 
@@ -103,7 +102,7 @@ header a:hover {
     margin-left: 150px;
   }
 
-  header {
+  nav {
     font-size: 1.5em;
     margin: 0;
     position: fixed;
@@ -112,9 +111,13 @@ header a:hover {
     text-align: left;
   }
 
-  header a {
+  nav a {
     margin: 0 0 4px 0;
     display: block;
+  }
+
+  nav a:hover {
+    margin-left: 6px;
   }
 }
 
