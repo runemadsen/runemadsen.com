@@ -159,7 +159,8 @@ if (production) {
     watch({
       paths: {
         "src/**/*": true,
-        "layouts/**/*": true
+        "layouts/**/*": true,
+        "src/css/*.scss": "**/*"
       },
       livereload: false
     })

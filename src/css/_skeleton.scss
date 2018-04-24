@@ -35,25 +35,23 @@ main iframe {
 /* Menu
 ---------------------------------------------------------*/
 
-header ul {
-  list-style: none;
-  text-transform: uppercase;
+header {
   -webkit-font-smoothing: antialiased;
+  text-transform: uppercase;
   font-size: 1.3em;
   font-weight: bold;
-  padding: 0;
   margin: 25px 0 0 0;
   text-align: center;
 }
 
-header li {
+header a {
   padding: 0;
   margin: 0 7px 0 0;
   display: inline-block;
 }
 
-header li:last-child {
-  margin-right: 0;
+header a:last-child {
+  margin: 0;
 }
 
 header a,
@@ -105,7 +103,7 @@ header a:hover {
     margin-left: 150px;
   }
 
-  header ul {
+  header {
     font-size: 1.5em;
     margin: 0;
     position: fixed;
@@ -114,8 +112,8 @@ header a:hover {
     text-align: left;
   }
 
-  header li {
-    margin: 0 0 10px 0;
+  header a {
+    margin: 0 0 4px 0;
     display: block;
   }
 }
