@@ -27,6 +27,7 @@ Handlebars.registerHelper("removeFilename", function(str) {
 });
 
 Handlebars.registerHelper("debug", function(obj) {
+  console.log("---> NEW DEBUG");
   console.log(obj);
 });
 

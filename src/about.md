@@ -84,6 +84,7 @@ Major in Film and Media studies, a program focused on the analysis of modern med
 
 ## Talks
 
+* 2018\. Digital Products and Design Systems, Berlingske Media.
 * 2017\. Programming Design Systems, Office of Creative Research.
 * 2017\. [The User Experience of Design Systems – On Material Design and the Templatization of Digital Products](/talks/uxcampcph/), UX Camp Copenhagen.
 * 2017\. Artist Talk, Harvard University.

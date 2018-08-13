@@ -1,4 +1,4 @@
-<title>Rune Madsen - Designer, artist, and educator</title>
+<title>Rune Madsen - {{#if title }}{{ title }}{{ else }}Designer, artist, and educator{{/if}}</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="{{ description }}">
@@ -8,7 +8,7 @@
 <meta name="twitter:creator" content="@runemadsen">
 <meta name="twitter:title" content="{{ title }}">
 <meta name="twitter:description" content="{{ description }}">
-<meta name="twitter:image:src" content="{{site.url}}{{#if page.poster }}{{ page.poster }}{{ else }}{{ 'DEFAULTURL' }}{{/if}}">
+<meta name="twitter:image:src" content="{{#if poster }}{{ poster }}{{ else }}https://assets.runemadsen.com/work/tinyartists-temp.jpg{{/if}}">
 <link rel="stylesheet" href="/{{ fingerprint.[css/app.css] }}">
 <script>
 (function(i, s, o, g, r, a, m) {
