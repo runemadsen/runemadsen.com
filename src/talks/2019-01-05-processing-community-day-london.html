@@ -1,0 +1,491 @@
+---
+layout: talk.html
+title: Processing Community Day London
+date: 2019-01-05 14:40:00
+excerpt: |
+  A presentation given at Processing Community Day London in 2019 about my book, Programming Design Systems, and my design+code practice, Design Systems International.
+poster: https://assets.runemadsen.com/processing-community-day-london-2019/front.jpg
+---
+
+<p>
+  <em>
+    This is a transcript of a keynote given at Processing Community Day London
+    in January, 2019.
+  </em>
+</p>
+
+<div class="slide">
+  <div class="img wide-750">
+    <img
+      src="https://assets.runemadsen.com/processing-community-day-london-2019/slide-001.jpg"
+    />
+  </div>
+  <div class="notes">
+    <p>
+      Hello everybody. Before I begin, I would like to say that I am thrilled to
+      be a part of this event. I have spent a lot of my time since 2012 teaching
+      designers and artists to code, and it is really wonderful to see an event
+      like this happen. I am hosting Processing Community Day Copenhagen next
+      weekend, so I am hoping to learn a lot of stuff and meet a lot of
+      interesting people today. So a big thanks to Joel and the team for
+      inviting me here.
+    </p>
+    <p>
+      I have called this talk Programming Design Systems, because I want to
+      primarily talk about the book by the same name that I’m currently writing
+      about the intersection between graphic design and programming languages.
+    </p>
+  </div>
+</div>
+
+<div class="slide">
+  <div class="img wide-750">
+    <img
+      src="https://assets.runemadsen.com/processing-community-day-london-2019/slide-002.jpg"
+    />
+  </div>
+  <div class="notes">
+    <p>
+      But first, let me briefly introduce myself. My name is Rune Madsen, and I
+      first of foremost think of myself as a designer who just happens to use
+      programming languages to build the kind of products that I care about.
+    </p>
+    <p>
+      My work tends to span a few categories, from the more artistic
+      installation and gallery work, to the professional (I used to work at the
+      New York Times and as a Creative Director for O’Reilly Media), and I have
+      been teaching at New York University since 2012, recently for three
+      semesters in Shanghai. But I think the common thread in all of this is the
+      merging of design and code.
+    </p>
+  </div>
+</div>
+
+<div class="slide">
+  <div class="img wide-750">
+    <img
+      src="https://assets.runemadsen.com/processing-community-day-london-2019/slide-003.jpg"
+    />
+  </div>
+  <div class="notes">
+    <p>
+      I recently co-founded what we call a deeply technical design studio named
+      <a href="https://designsystems.international"
+        >Design Systems International</a
+      >
+      with my talented designer friend
+      <a href="https://twitter.com/brvmrtn">Martin Bravo</a>, where we work
+      hands-on with many of the ideas that I’m going to talk about today. I will
+      show some of our work at the end also.
+    </p>
+    <p>
+      So that is a little bit about me. Before I begin, I was wondering if we
+      can do a quick headcount. How many of you have tried programming before?
+      How many of you are students? And how many of you consider yourself
+      designers? Thanks a lot, that is always good to know.
+    </p>
+  </div>
+</div>
+
+<div class="slide">
+  <div class="img wide-750">
+    <img
+      src="https://assets.runemadsen.com/processing-community-day-london-2019/slide-004.jpg"
+    />
+  </div>
+  <div class="notes">
+    <p>
+      I want to begin by spending some time talking about why I am writing this
+      book. From 2012 to 2018, I was teaching at the Interactive
+      Telecommunications Program (also called ITP), which is an almost 40-year
+      old graduate program at New York University that very much shares the same
+      values as the Processing Foundation: To make learning how to program
+      accessible to communities that normally do not feel included or think of
+      themselves as technical. It is a very diverse graduate program both in age
+      groups and in the fields represented, and we are proud that the student
+      body is majority women – which is rare for a program focused on
+      programming languages and electronics. It is also home to Daniel Shiffman
+      from the
+      <a href="https://www.youtube.com/channel/UCvjgXvBlbQiydffZU7m1_aw"
+        >Coding Train YouTube channel</a
+      >
+      who some of you might know.
+    </p>
+  </div>
+</div>
+
+<div class="slide">
+  <div class="img wide-750">
+    <img
+      src="https://assets.runemadsen.com/processing-community-day-london-2019/slide-005.jpg"
+    />
+  </div>
+  <div class="notes">
+    <p>
+      The way we think about the computer at ITP is quite different than that of
+      a traditional engineering program. We teach hard skills, but only because
+      our students need them in order to make the kind of creative projects they
+      care about: They want to learn P5.js so they can make an animated comic,
+      or they want to learn Processing so they can make a generative poster that
+      looks different every time you print it.
+    </p>
+    <p>
+      I really like this approach because in this way, programming languages
+      become just another tool, a very powerful tool, that enable us to produce
+      creative projects. And it gets us away from a world where we separate
+      people into technical people who can program the computer on the one side
+      and creative people who use their hands on the other side.
+    </p>
+  </div>
+</div>
+
+<div class="slide">
+  <div class="img wide-750">
+    <img
+      src="https://assets.runemadsen.com/processing-community-day-london-2019/slide-006.jpg"
+    />
+  </div>
+  <div class="notes">
+    <p>
+      So if you are a painter and you were trained to use a bunch of tools such
+      as pigments, brushes, pencils, charcoal, there is no reason why you should
+      not also learn how to program and see where this takes you creatively. So
+      we really try to lower the barriers to entry for people who normally don’t
+      consider themselves programmers. This also gives me a chance to show my
+      talented friend Alex Dodge, who uses lasercut stencils created from
+      generative 3D models to create these very graphic, almost graphic
+      design-like, paintings.
+    </p>
+  </div>
+</div>
+
+<div class="slide">
+  <div class="img wide-750">
+    <img
+      src="https://assets.runemadsen.com/processing-community-day-london-2019/slide-007.jpg"
+    />
+  </div>
+  <div class="notes">
+    <p>
+      However, one thing that has struck me watching students get introduced to
+      programming languages is that computers are such a powerful tool that if
+      we don not really keep our eyes on it, the computer ends up taking all our
+      focus.
+    </p>
+  </div>
+</div>
+
+<div class="slide">
+  <div class="img wide-750">
+    <img
+      src="https://assets.runemadsen.com/processing-community-day-london-2019/slide-008.jpg"
+    />
+  </div>
+  <div class="notes">
+    <p>
+      If we assume that every creative project is (in simple terms) made up of
+      the why (the concept or the content) and the how (the design or the form),
+      the creative coding community (or whatever we should call it) tends to
+      focus a whole lot on the how.
+    </p>
+  </div>
+</div>
+
+<div class="slide">
+  <div class="img wide-750">
+    <img
+      src="https://assets.runemadsen.com/processing-community-day-london-2019/slide-009.jpg"
+    />
+  </div>
+  <div class="notes">
+    <p>
+      This means that we spend a lot of time on what a thing looks like and how
+      it is made, and very little time asking why it should even exist in the
+      world. I began noticing this in my classroom where students would mostly
+      comment on the technical sufficiency and visual style of a project, and
+      rarely on the concept. I think that is a very natural thing when you are
+      introduced to a powerful tool, but it also means that we completely lose
+      our connection to fine arts education.
+    </p>
+  </div>
+</div>
+
+<div class="slide">
+  <div class="img wide-750">
+    <img
+      src="https://assets.runemadsen.com/processing-community-day-london-2019/slide-010.jpg"
+    />
+  </div>
+  <div class="notes">
+    <p>
+      If you have ever been at an interactive museum exhibition, waving your
+      arms to make flowers grow, wondering what the purpose is, ...
+    </p>
+  </div>
+</div>
+
+<div class="slide">
+  <div class="img wide-750">
+    <img
+      src="https://assets.runemadsen.com/processing-community-day-london-2019/slide-011.jpg"
+    />
+  </div>
+  <div class="notes">
+    <p>
+      ... or seen this monoculture of dance performances with motion-enabled
+      projections that makes you wonder whether it is us using the computer or
+      it is the computer using us, you know what I mean. It is not that these
+      projects are bad, but I do not get much satisfaction from them.
+    </p>
+  </div>
+</div>
+
+<div class="slide">
+  <div class="img wide-750">
+    <img
+      src="https://assets.runemadsen.com/processing-community-day-london-2019/slide-012.jpg"
+    />
+  </div>
+  <div class="notes">
+    <p>
+      I guess uou can compare it to the new Marvel movies. I wondered for a long
+      time why they are unbearable for me to watch. I recently heard Douglas
+      Rushkoff say in podcast about another TV-show,
+      <em
+        >“It went through me like cheese doodles. It’s constructed for me to
+        keep eating it […], but it actually doesn’t deliver any nutrition”</em
+      >. So I wanted to teach a class that could teach code and concept at the
+      same time.
+    </p>
+  </div>
+</div>
+
+<div class="slide">
+  <div class="img wide-750">
+    <img
+      src="https://assets.runemadsen.com/processing-community-day-london-2019/slide-013.jpg"
+    />
+  </div>
+  <div class="notes">
+    <p>
+      So why focus on graphic design? I think there are many reasons why such a
+      book should exist.
+    </p>
+  </div>
+</div>
+
+<div class="slide">
+  <div class="img wide-750">
+    <img
+      src="https://assets.runemadsen.com/processing-community-day-london-2019/slide-014.jpg"
+    />
+  </div>
+  <div class="notes">
+    <p>
+      My primary reason is that what graphic design products looked like 25
+      years ago is not at all what they are today. We used to live in a world of
+      static design products where the word <em>design</em> described most of
+      the production process. If you are making a poster, the final product is
+      really not that much different from the proposed design.
+    </p>
+  </div>
+</div>
+
+<div class="slide">
+  <div class="img wide-750">
+    <img
+      src="https://assets.runemadsen.com/processing-community-day-london-2019/slide-015.jpg"
+    />
+  </div>
+  <div class="notes">
+    <p>
+      But today most design products are digital and created in software, and
+      the visual design is just a small part of what makes up the design
+      product.
+    </p>
+  </div>
+</div>
+
+<div class="slide">
+  <div class="img wide-750">
+    <img
+      src="https://assets.runemadsen.com/processing-community-day-london-2019/slide-016.jpg"
+    />
+  </div>
+  <div class="notes">
+    <p>
+      What makes a digital design product good is, yes the visual design, but
+      also all the things that make it come alive: animations, loading of live
+      data, haptic feedback, etc. And the problem is that none of this can be
+      designed in a traditional graphic design tool. All of this requires the
+      use of programming.
+    </p>
+  </div>
+</div>
+
+<div class="slide">
+  <div class="img wide-750">
+    <img
+      src="https://assets.runemadsen.com/processing-community-day-london-2019/slide-017.jpg"
+    />
+  </div>
+  <div class="notes">
+    <p>
+      If you look at the tools that graphic designers use, it is apparent that
+      it is a field built on manual work. Most of the tools in Photoshop,
+      Illustrator, or sketch are entirely modelled on manual processes that came
+      before the computer: The crop tool, the marquee tool. Even though you are
+      doing it with the mouse, it is still a manual drawing process. So we know
+      that traditional design tools are very bad at prototyping complex systems.
+    </p>
+  </div>
+</div>
+
+<div class="slide">
+  <div class="img wide-750">
+    <img
+      src="https://assets.runemadsen.com/processing-community-day-london-2019/slide-019.jpg"
+    />
+  </div>
+  <div class="notes">
+    <p>
+      So if you insist that designers should only use traditional design tools,
+      you end up defining design as a very small part of what it means to make
+      something.
+    </p>
+  </div>
+</div>
+
+<div class="slide">
+  <div class="img wide-750">
+    <img
+      src="https://assets.runemadsen.com/processing-community-day-london-2019/slide-020.jpg"
+    />
+  </div>
+  <div class="notes">
+    <p>
+      You would think that design schools would understand that this is
+      happening and change their curriculum to keep teaching what they are good
+      at, but expand their toolset to include new technologies. Unfortunately
+      what seems to happen is that many design schools find it too hard to teach
+      code, so they double down on this idea that designers should be creative
+      people who come up with ideas, and then more technical people should
+      implement them. I think that is really unfortunate because it leaves us
+      with an educational system where the design schools teach conceptual
+      thinking but in a frame of mind where the designer is someone who makes
+      posters and book covers, and technical schools that teach code but not
+      conceptual thinking. I am off course generalising here, because there are
+      many amazing art+technology schools, but I do think that a common problem
+      here is that there is no foundational book that thinks about graphic
+      design (shape, color, typography, layout, etc) in terms of programming
+      languages.
+    </p>
+  </div>
+</div>
+
+<div class="slide">
+  <div class="img wide-750">
+    <img
+      src="https://assets.runemadsen.com/processing-community-day-london-2019/slide-021.jpg"
+    />
+  </div>
+  <div class="notes">
+    <p>
+      And that is really fristrating because the history of graphic design is
+      full of books applying systems and rules to the design process. Even
+      before the computer, designers were using algorithms to help them design
+      better, so I find it particularly odd that the field of graphic design has
+      not embraced these new tools.
+    </p>
+  </div>
+</div>
+
+<div class="slide">
+  <div class="img wide-750">
+    <img
+      src="https://assets.runemadsen.com/processing-community-day-london-2019/slide-022.jpg"
+    />
+  </div>
+  <div class="notes"><p></p></div>
+</div>
+
+<div class="slide">
+  <div class="img wide-750">
+    <img
+      src="https://assets.runemadsen.com/processing-community-day-london-2019/slide-023.jpg"
+    />
+  </div>
+  <div class="notes"><p></p></div>
+</div>
+
+<div class="slide">
+  <div class="img wide-750">
+    <img
+      src="https://assets.runemadsen.com/processing-community-day-london-2019/slide-024.jpg"
+    />
+  </div>
+  <div class="notes"><p></p></div>
+</div>
+
+<div class="slide">
+  <div class="img wide-750">
+    <img
+      src="https://assets.runemadsen.com/processing-community-day-london-2019/slide-025.jpg"
+    />
+  </div>
+  <div class="notes"><p></p></div>
+</div>
+
+<div class="slide">
+  <div class="img wide-750">
+    <img
+      src="https://assets.runemadsen.com/processing-community-day-london-2019/slide-026.jpg"
+    />
+  </div>
+  <div class="notes"><p></p></div>
+</div>
+
+<div class="slide">
+  <div class="img wide-750">
+    <img
+      src="https://assets.runemadsen.com/processing-community-day-london-2019/slide-027.jpg"
+    />
+  </div>
+  <div class="notes"><p></p></div>
+</div>
+
+<div class="slide">
+  <div class="img wide-750">
+    <img
+      src="https://assets.runemadsen.com/processing-community-day-london-2019/slide-028.jpg"
+    />
+  </div>
+  <div class="notes"><p></p></div>
+</div>
+
+<div class="slide">
+  <div class="img wide-750">
+    <img
+      src="https://assets.runemadsen.com/processing-community-day-london-2019/slide-029.jpg"
+    />
+  </div>
+  <div class="notes"><p></p></div>
+</div>
+
+<div class="slide">
+  <div class="img wide-750">
+    <img
+      src="https://assets.runemadsen.com/processing-community-day-london-2019/slide-030.jpg"
+    />
+  </div>
+  <div class="notes"><p></p></div>
+</div>
+
+<div class="slide">
+  <div class="img wide-750">
+    <img
+      src="https://assets.runemadsen.com/processing-community-day-london-2019/slide-031.jpg"
+    />
+  </div>
+  <div class="notes"><p></p></div>
+</div>

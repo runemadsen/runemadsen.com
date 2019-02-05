@@ -1,89 +1,86 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Rune Madsen - 404</title>
-  <style media="screen">
-    body {
-      font-size: 100%;
-      font-family: "Helvetica Neue", Helvetica, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-    #error {
-      width: 251px;
-      position: absolute;
-      top: 10%;
-      left: 50%;
-      margin-left: -125px;
-    }
+  <head>
+    <title>Rune Madsen - 404</title>
+    <style media="screen">
+      body {
+        font-size: 100%;
+        font-family: "Helvetica Neue", Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      #error {
+        width: 251px;
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        margin-left: -125px;
+      }
 
-    #error h1 {
-      margin-top: 0;
-      font-size: 95px;
-      line-height: 95px;
-      text-align: center;
-      color: #1a1a1a;
-      margin-bottom: 11px;
-    }
+      #error h1 {
+        margin-top: 0;
+        font-size: 95px;
+        line-height: 95px;
+        text-align: center;
+        color: #1a1a1a;
+        margin-bottom: 11px;
+      }
 
-    #error p {
-      font-size: 24px;
-      text-align: center;
-      margin: 0;
-      padding: 0;
-      margin-top: 22px;
-      color: #1a1a1a;
-    }
+      #error p {
+        font-size: 24px;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        margin-top: 22px;
+        color: #1a1a1a;
+      }
 
-    #error #computer {
-      position: relative;
-    }
+      #error #computer {
+        position: relative;
+      }
 
-    #computer #left-eye,
-    #computer #right-eye {
-      position: absolute;
-      width: 26px;
-      height: 26px;
-      top: 55px;
-      background-image: url('https://assets.runemadsen.com/eye.png');
-    }
+      #computer #left-eye,
+      #computer #right-eye {
+        position: absolute;
+        width: 26px;
+        height: 26px;
+        top: 55px;
+        background-image: url("https://assets.runemadsen.com/eye.png");
+      }
 
-    #computer #left-eye {
-      left: 86px;
-    }
+      #computer #left-eye {
+        left: 86px;
+      }
 
-    #computer #right-eye {
-      left: 145px;
-    }
-  </style>
-</head>
-<body>
-
-  <div id="error">
-    <h1>404</h1>
-    <div id="computer">
-      <img src="https://assets.runemadsen.com/404.jpg" />
-      <div id="left-eye">&nbsp;</div>
-      <div id="right-eye">&nbsp;</div>
+      #computer #right-eye {
+        left: 145px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="error">
+      <h1>404</h1>
+      <div id="computer">
+        <img src="https://assets.runemadsen.com/404.jpg" />
+        <div id="left-eye">&nbsp;</div>
+        <div id="right-eye">&nbsp;</div>
+      </div>
+      <p>Sorry about that!</p>
     </div>
-    <p>Sorry about that!</p>
-  </div>
 
-  <script type="text/javascript">
-    var left = document.getElementById('left-eye');
-    var right = document.getElementById('right-eye');
-    function lookAround()
-    {
-      var x = Math.random() * 34;
-      var y = 55 + (Math.random() * 50);
-      left.style.left = (66 + x) + 'px';
-      right.style.left = (136 + x) + 'px';
-      left.style.top = y + 'px';
-      right.style.top = y + 'px';
-      setTimeout(lookAround, 1000 + (Math.random() * 4000));
-    }
-    setTimeout(lookAround, 3000);
-  </script>
-
-</body>
+    <script type="text/javascript">
+      var left = document.getElementById("left-eye");
+      var right = document.getElementById("right-eye");
+      function lookAround() {
+        var x = Math.random() * 34;
+        var y = 55 + Math.random() * 50;
+        left.style.left = 66 + x + "px";
+        right.style.left = 136 + x + "px";
+        left.style.top = y + "px";
+        right.style.top = y + "px";
+        setTimeout(lookAround, 1000 + Math.random() * 4000);
+      }
+      setTimeout(lookAround, 3000);
+    </script>
+  </body>
 </html>

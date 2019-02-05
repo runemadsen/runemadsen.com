@@ -84,41 +84,45 @@ Major in Film and Media studies, a program focused on the analysis of modern med
 
 ## Talks
 
-* 2018\. Digital Products and Design Systems, Berlingske Media.
-* 2017\. Programming Design Systems, Office of Creative Research.
-* 2017\. [The User Experience of Design Systems – On Material Design and the Templatization of Digital Products](/talks/uxcampcph/), UX Camp Copenhagen.
-* 2017\. Artist Talk, Harvard University.
-* 2017\. Designing Data Visualizations, O'Reilly Design Conference.
-* 2017\. Artist Talk, Queens College.
-* 2016\. The Art of Designing Digital Narratives, Bjerg and Dahl workshop, Copenhagen.
-* [Programming Design Systems](/talks/programming-design-systems/), Design Matters Conference, Copenhagen.
-* 2015\. Artist Talk, Hofstra University.
-* 2015\. The Art of Designing Digital Narratives, Society for News Design Scandinavia Conference.
-* 2015\. Digital Narratives, Danish Broadcasting Corporation.
-* 2015\. Redesigning oreilly.com, Danish Online News Association.
-* 2014\. Graphic Design and Data Visualization in Processing, Anderson Ranch.
-* 2014\. Digital Narratives, Danish Online News Association.
-* 2014\. Digital Narratives, TV2 Denmark.
-* 2013\. Programming Digital Narratives, Studio 20, NYU School of Journalism.
-* 2013\. Graphic Design as a System, Pratt Institute.
-* 2013\. [Programming and the Visual Arts](/talks/waza-programming-and-the-visual-arts/), Heroku Waza.
-* 2012\. Thoughts on Algorithmic Design, NYU Computer Science.
-* 2011\. Artist Talk, Maryland Institute College of Art.
-* 2011\. Computational Design, Interactive Telecommunications Program, NYU.
-* 2010\. Design and Programming, New Media Days, Copenhagen.
-* 2010\. Data Visualization on the Web, Pratt Institute.
+- 2019\. Design Systems International, Interactive Telecommunications Program, NYU.
+- 2019\. Design Systems International, Brooklyn Research
+- 2019\. Introduction to p5.js, Processing Community Day Copenhagen.
+- 2019\. Programming Design Systems, Processing Community Day London.
+- 2018\. Digital Products and Design Systems, Berlingske Media.
+- 2017\. Programming Design Systems, Office of Creative Research.
+- 2017\. [The User Experience of Design Systems – On Material Design and the Templatization of Digital Products](/talks/uxcampcph/), UX Camp Copenhagen.
+- 2017\. Artist Talk, Harvard University.
+- 2017\. Designing Data Visualizations, O'Reilly Design Conference.
+- 2017\. Artist Talk, Queens College.
+- 2016\. The Art of Designing Digital Narratives, Bjerg and Dahl workshop, Copenhagen.
+- [Programming Design Systems](/talks/programming-design-systems/), Design Matters Conference, Copenhagen.
+- 2015\. Artist Talk, Hofstra University.
+- 2015\. The Art of Designing Digital Narratives, Society for News Design Scandinavia Conference.
+- 2015\. Digital Narratives, Danish Broadcasting Corporation.
+- 2015\. Redesigning oreilly.com, Danish Online News Association.
+- 2014\. Graphic Design and Data Visualization in Processing, Anderson Ranch.
+- 2014\. Digital Narratives, Danish Online News Association.
+- 2014\. Digital Narratives, TV2 Denmark.
+- 2013\. Programming Digital Narratives, Studio 20, NYU School of Journalism.
+- 2013\. Graphic Design as a System, Pratt Institute.
+- 2013\. [Programming and the Visual Arts](/talks/waza-programming-and-the-visual-arts/), Heroku Waza.
+- 2012\. Thoughts on Algorithmic Design, NYU Computer Science.
+- 2011\. Artist Talk, Maryland Institute College of Art.
+- 2011\. Computational Design, Interactive Telecommunications Program, NYU.
+- 2010\. Design and Programming, New Media Days, Copenhagen.
+- 2010\. Data Visualization on the Web, Pratt Institute.
 
 ## Commissions
 
-* 2016\. Tiny Artist 7, Bunker Gallery, New York City.
-* 2013\. The Artist is not Present, SP Urban Digital Festival, Sao Paulo.
-* 2013\. Tiny Artists 4-6, TEMP Gallery, New York City.
-* 2013\. Tiny Artist 1-3, Dumbo Arts Festival, New York City.
-* 2011\. Balloon Projections. Performance by Oh Land on David Letterman Jimmy Kimmel Live, and at the Danish Grammy's.
-* 2011\. People Watching Plus. Featured in The Antics Roadshow documentary directed by Banksy.
-* 2011\. Site-specific installation, TV of Tomorrow Gallery, New York City.
-* 2011\. Site-specific installation, Monitor Digital festival, Guadalajara.
-* 2011\. Site-specific installation, Charles Bank Gallery, New York City.
-* 2011\. Site-specific installation, Vimeo Festival Gallery, New York City.
-* 2010\. Site-specific installation, CodeConf, San Francisco.
-* Other recognition includes press coverage in Vogue, Buzzfeed, Mashable, Make, Engadget, Adafruit, Techcrunch, Gizmodo, and Laughing Squid.
+- 2016\. Tiny Artist 7, Bunker Gallery, New York City.
+- 2013\. The Artist is not Present, SP Urban Digital Festival, Sao Paulo.
+- 2013\. Tiny Artists 4-6, TEMP Gallery, New York City.
+- 2013\. Tiny Artist 1-3, Dumbo Arts Festival, New York City.
+- 2011\. Balloon Projections. Performance by Oh Land on David Letterman Jimmy Kimmel Live, and at the Danish Grammy's.
+- 2011\. People Watching Plus. Featured in The Antics Roadshow documentary directed by Banksy.
+- 2011\. Site-specific installation, TV of Tomorrow Gallery, New York City.
+- 2011\. Site-specific installation, Monitor Digital festival, Guadalajara.
+- 2011\. Site-specific installation, Charles Bank Gallery, New York City.
+- 2011\. Site-specific installation, Vimeo Festival Gallery, New York City.
+- 2010\. Site-specific installation, CodeConf, San Francisco.
+- Other recognition includes press coverage in Vogue, Buzzfeed, Mashable, Make, Engadget, Adafruit, Techcrunch, Gizmodo, and Laughing Squid.
