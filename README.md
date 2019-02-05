@@ -1,4 +1,4 @@
-# runemadsen.comp
+# runemadsen.com
 
 To run in development:
 
@@ -6,7 +6,11 @@ To run in development:
 $ npm start
 ```
 
-To deploy to production:
+## Deployment
+
+First set up a `runemadsen` profile in `aws-cli` with the proper permissions.
+
+Then run:
 
 ```bash
 $ npm run deploy
