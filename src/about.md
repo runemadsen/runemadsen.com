@@ -86,6 +86,7 @@ Major in Film and Media studies, a program focused on the analysis of modern med
 
 - 2019\. Design Systems International, Interactive Telecommunications Program, NYU.
 - 2019\. Design Systems International, Brooklyn Research
+- 2019\. Design Systems International, Copenhagen Institute of Interaction Design.
 - 2019\. Introduction to p5.js, Processing Community Day Copenhagen.
 - 2019\. Programming Design Systems, Processing Community Day London.
 - 2018\. Digital Products and Design Systems, Berlingske Media.
