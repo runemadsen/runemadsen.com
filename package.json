@@ -22,7 +22,8 @@
   },
   "scripts": {
     "build": "node build.js production",
-    "start": "node build.js"
+    "start": "node build.js",
+    "deploy": "static deploy"
   },
   "static": {
     "profile": "runemadsen",
