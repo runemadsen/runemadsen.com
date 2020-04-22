@@ -21,7 +21,7 @@
     "moment": "^2.18.1"
   },
   "scripts": {
-    "build": "node build.js production",
+    "build": "NODE_ENV=production node build.js",
     "start": "node build.js",
     "deploy": "static deploy"
   },

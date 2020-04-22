@@ -11,7 +11,7 @@ var paginate = require("metalsmith-pager");
 var inplace = require("metalsmith-in-place");
 var debug = require("metalsmith-debug");
 var serve = require("metalsmith-serve");
-var production = process.argv[2] == "production";
+var production = process.env.NODE_ENV === "production";
 
 // Helpers
 // --------------------------------------------
