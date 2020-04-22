@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "@designsystemsinternational/static": "^2.1.5",
     "handlebars": "^4.0.8",
     "http-server": "^0.11.1",
     "jstransformer-handlebars": "^1.1.0",
@@ -20,7 +21,22 @@
     "moment": "^2.18.1"
   },
   "scripts": {
-    "start": "node build.js",
-    "deploy": "bash ./deploy.sh"
+    "build": "node build.js production",
+    "start": "node build.js"
+  },
+  "static": {
+    "profile": "runemadsen",
+    "region": "us-east-1",
+    "buildDir": "build",
+    "shouldRunBuildCommand": true,
+    "buildCommand": "npm run build",
+    "environments": {
+      "production": {
+        "stack": "NOT USED",
+        "bucket": "runemadsen.com",
+        "htmlCache": "3600",
+        "assetsCache": "31536000"
+      }
+    }
   }
 }
