@@ -18,7 +18,7 @@
     "metalsmith-sass": "^1.4.0",
     "metalsmith-serve": "0.0.7",
     "metalsmith-watch": "^1.0.3",
-    "moment": "^2.18.1"
+    "moment": "^2.29.4"
   },
   "scripts": {
     "build": "NODE_ENV=production node build.js",
