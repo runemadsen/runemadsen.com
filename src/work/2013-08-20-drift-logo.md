@@ -1,5 +1,5 @@
 ---
-layout: work.html
+layout: work.hbs
 title: Drift Logo
 date: 2011-05-02 22:00:00
 excerpt: |

@@ -1,7 +1,7 @@
 ---
-layout:     blog.html
-title:      "Self Portrait"
-date:       2010-10-07 16:15:50
+layout: blog.hbs
+title: "Self Portrait"
+date: 2010-10-07 16:15:50
 categories: blog
 ---
 

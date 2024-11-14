@@ -1,5 +1,5 @@
 ---
-layout: work.html
+layout: work.hbs
 title: LaGrange Consulting
 date: 2011-05-04 22:00:00
 excerpt: |

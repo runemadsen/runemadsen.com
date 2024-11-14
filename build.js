@@ -144,6 +144,7 @@ let compiler = Metalsmith(import.meta.dirname)
   .use(fingerprint({ pattern: "css/index.css" }))
   .use(
     layouts({
+      pattern: "**/*.html",
       directory: "layouts",
       default: "default.hbs",
       engineOptions: {

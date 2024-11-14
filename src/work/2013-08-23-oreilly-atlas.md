@@ -1,5 +1,5 @@
 ---
-layout: work.html
+layout: work.hbs
 title: O'Reilly Atlas
 date: 2013-08-23 22:00:00
 excerpt: |
@@ -8,15 +8,22 @@ categories: work
 poster: https://assets.runemadsen.com/work/atlas.jpg
 ---
 
-[O'Reilly Atlas](https://atlas.oreilly.com) is a web application aimed at simplifying the creation and distribution of digital content. It is a Git-backed writing and production tool that exports books as PDF, ePub, Mobi and HTML, from single source Markdown, Asciidoc or HTML files, styled with CSS only.
+[O'Reilly Atlas](https://atlas.oreilly.com) is a web application aimed at
+simplifying the creation and distribution of digital content. It is a Git-backed
+writing and production tool that exports books as PDF, ePub, Mobi and HTML, from
+single source Markdown, Asciidoc or HTML files, styled with CSS only.
 
 <div class="wide-750">
   <img src="https://assets.runemadsen.com/work/atlas.jpg" />
 </div>
 
-All features in the application can either be used through the UI, or through an extensive API that allows publishers to use Atlas as a part of their native toolchain.
+All features in the application can either be used through the UI, or through an
+extensive API that allows publishers to use Atlas as a part of their native
+toolchain.
 
-A closer look at the app architecture and workflow can be found in [this excellent blog post by Sanders Kleinfeld](http://www.digitalbookworld.com/2014/next-generation-book-publishing-of-the-html-by-the-html-for-the-html/), or via the [splash page of the application itself](https://atlas.oreilly.com).
+A closer look at the app architecture and workflow can be found in
+[this excellent blog post by Sanders Kleinfeld](http://www.digitalbookworld.com/2014/next-generation-book-publishing-of-the-html-by-the-html-for-the-html/),
+or via the [splash page of the application itself](https://atlas.oreilly.com).
 
 <img src="https://assets.runemadsen.com/work/atlas_4.jpg" />
 

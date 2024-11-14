@@ -6,10 +6,10 @@ title: Talks
 
 {{#each collections.talks }}
   <section>
-    <a href="/{{ path }}"><h2>{{ title }}</h2></a>
+    <a href="/talks/{{ slug }}"><h2>{{ title }}</h2></a>
     <div class="wide-750">
-      <a href="/{{ path }}"><img src="{{ poster }}" alt="{{ title }}" /></a>
+      <a href="/talks/{{ slug }}"><img src="{{ poster }}" alt="{{ title }}" /></a>
     </div>
-    <p>{{ excerpt }} <a href="/{{ path }}">Continue reading...</a></p>
+    <p>{{ excerpt }} <a href="/talks/{{ slug }}">Continue reading...</a></p>
   </section>
 {{/each}}

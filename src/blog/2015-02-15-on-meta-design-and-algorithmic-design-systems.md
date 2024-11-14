@@ -1,9 +1,10 @@
 ---
-layout:     blog.html
-title:      "On meta-design and algorithmic design systems"
-date:       2015-02-15 19:41:00
+layout: blog.hbs
+title: "On meta-design and algorithmic design systems"
+date: 2015-02-15 19:41:00
 categories: blog
-description: "The rise of the meta-designer, and the use of algorithmic design systems."
+description:
+  "The rise of the meta-designer, and the use of algorithmic design systems."
 keywords: "graphic, design, systems, creative, code, algorithms"
 poster: https://assets.runemadsen.com/blog/vw.jpg
 ---
@@ -12,23 +13,60 @@ poster: https://assets.runemadsen.com/blog/vw.jpg
   <img src="https://assets.runemadsen.com/blog/vw.jpg" alt="VW logo" />
 </div>
 
-This post is about something I see as a continuing trend in the design world: the rise of the meta-designer and algorithmic design systems.
+This post is about something I see as a continuing trend in the design world:
+the rise of the meta-designer and algorithmic design systems.
 
-> "Meta-design is much more difficult than design; it’s easier to draw something than to explain how to draw it" - Donald Knuth, The Metafont Book
+> "Meta-design is much more difficult than design; it’s easier to draw something
+> than to explain how to draw it" - Donald Knuth, The Metafont Book
 
-Until recently, the term *Graphic Designer* was used to describe artists firmly rooted in the fine arts. Aspiring design students graduated with MFA degrees, and their curriculums were based on traditions taught by painting, sculpture and architecture. Paul Rand once famously said: *"It's important to use your hands. This is what distinguishes you from a cow or a computer operator"*. At best, this teaches the designer not to be dictated by their given tool. At worst, the designer is institutionalized to think of themselves as ideators: the direct opposite to a technical person. 
+Until recently, the term _Graphic Designer_ was used to describe artists firmly
+rooted in the fine arts. Aspiring design students graduated with MFA degrees,
+and their curriculums were based on traditions taught by painting, sculpture and
+architecture. Paul Rand once famously said: _"It's important to use your hands.
+This is what distinguishes you from a cow or a computer operator"_. At best,
+this teaches the designer not to be dictated by their given tool. At worst, the
+designer is institutionalized to think of themselves as ideators: the direct
+opposite to a technical person.
 
-This has obviously changed with the advent of computers (and the field of web design in particular), but not to the degree that one would expect. Despite recent efforts in defining digital-first design vocabularies, like [Google's Material Design](http://www.google.com/design/spec/material-design/introduction.html), the legacy of the printed page is still omnipresent. Even the most adept companies are organized around principles inherited from desktop publishing, and, when the lines are drawn, we still have separate design and engineering departments. Products start as static layouts in the former and become dynamic implementations in the latter. Designers use tools modeled after manual processes that came way before the computer while engineers work in purely text-based environments. I believe this approach to design will change in a fundamental way and, like Donald Knuth, I'll call this the transition from design to meta-design.
+This has obviously changed with the advent of computers (and the field of web
+design in particular), but not to the degree that one would expect. Despite
+recent efforts in defining digital-first design vocabularies, like
+[Google's Material Design](http://www.google.com/design/spec/material-design/introduction.html),
+the legacy of the printed page is still omnipresent. Even the most adept
+companies are organized around principles inherited from desktop publishing,
+and, when the lines are drawn, we still have separate design and engineering
+departments. Products start as static layouts in the former and become dynamic
+implementations in the latter. Designers use tools modeled after manual
+processes that came way before the computer while engineers work in purely
+text-based environments. I believe this approach to design will change in a
+fundamental way and, like Donald Knuth, I'll call this the transition from
+design to meta-design.
 
-So what is meta-design? In a traditional design practice, the designer works directly on a design product. Be it a logo, website, or a set of posters, the designer is the instrument to produce the final artifact. A meta-designer works to distill this instrumentation into a design system, often written in software, that can create the final artifact. Instead of drawing it manually, she is programming the system to draw it. These systems can then be used within different contexts to generate a range of design products without much effort.
+So what is meta-design? In a traditional design practice, the designer works
+directly on a design product. Be it a logo, website, or a set of posters, the
+designer is the instrument to produce the final artifact. A meta-designer works
+to distill this instrumentation into a design system, often written in software,
+that can create the final artifact. Instead of drawing it manually, she is
+programming the system to draw it. These systems can then be used within
+different contexts to generate a range of design products without much effort.
 
 <div class="wide-750">
   <img src="https://assets.runemadsen.com/blog/casa.jpg" alt="Case de Musica logo" />
 </div>
 
-As a simple example, take this logo for a concert hall in Portugal. Instead of designing a static logo, [Sagmeister & Walsh](http://www.sagmeisterwalsh.com/) delivered a logo system that can be used to [generate endless variations](http://www.sagmeisterwalsh.com/work/project/casa-da-musica-identity/) of the logo, for use in posters, business cards, and on the web. Another example is Donald Knuth's [Metafont](http://en.wikipedia.org/wiki/Metafont), a programming language for designing typefaces. Where normal fonts are defined by their vector outlines and require tedious manual work to create, Metafont algorithmically generates new fonts via strokes inspired by human handwriting.
+As a simple example, take this logo for a concert hall in Portugal. Instead of
+designing a static logo, [Sagmeister & Walsh](http://www.sagmeisterwalsh.com/)
+delivered a logo system that can be used to
+[generate endless variations](http://www.sagmeisterwalsh.com/work/project/casa-da-musica-identity/)
+of the logo, for use in posters, business cards, and on the web. Another example
+is Donald Knuth's [Metafont](http://en.wikipedia.org/wiki/Metafont), a
+programming language for designing typefaces. Where normal fonts are defined by
+their vector outlines and require tedious manual work to create, Metafont
+algorithmically generates new fonts via strokes inspired by human handwriting.
 
-Although not a new phenomenon, I believe this to be an important evolution of the design profession, and there's a number of reasons why I think it's particularly interesting today.
+Although not a new phenomenon, I believe this to be an important evolution of
+the design profession, and there's a number of reasons why I think it's
+particularly interesting today.
 
 <ol class="bignums">
 
@@ -58,16 +96,38 @@ Although not a new phenomenon, I believe this to be an important evolution of th
   <img src="https://assets.runemadsen.com/blog/metafont.jpg" alt="Metafont and TrueType" />
 </div>
 
-It's dangerous to speculate about the future if you're looking for simple outcomes, and we know for a fact that the new doesn't extinguish the old. However, I think a new type of meta-design practice will become increasingly visible, and I'd like to describe what this could look like.
+It's dangerous to speculate about the future if you're looking for simple
+outcomes, and we know for a fact that the new doesn't extinguish the old.
+However, I think a new type of meta-design practice will become increasingly
+visible, and I'd like to describe what this could look like.
 
-I envision a design practice that works in the intersection between art, design and computation. A company founded on the belief that the pragmatic and poetic is inseparable, and that modern design products should be dynamic, adaptable systems built in code. This kind of practice would create beautiful, intelligent, and functional design products for any medium, be it physical installations, web applications, or print products. Most of all, it would be a company dedicated to good ideas, with the talent to implement them despite technical requirements. 
+I envision a design practice that works in the intersection between art, design
+and computation. A company founded on the belief that the pragmatic and poetic
+is inseparable, and that modern design products should be dynamic, adaptable
+systems built in code. This kind of practice would create beautiful,
+intelligent, and functional design products for any medium, be it physical
+installations, web applications, or print products. Most of all, it would be a
+company dedicated to good ideas, with the talent to implement them despite
+technical requirements.
 
-There are several reasons why this practice would be built around designers who work in code. They have the skills to question assumptions brought to us by existing design tools, and can help build new tools to replace them. They can think critically about these trends using their domain-knowledge, and conduct original research with deep connections between the humanities and computer science. They can also build a company culture where this talent wants to work, with [a deep trust in the individual](http://en.wikipedia.org/wiki/Bounded_rationality), a relentless pursuit of the sublime, and a belief in failure as a means of innovation.
+There are several reasons why this practice would be built around designers who
+work in code. They have the skills to question assumptions brought to us by
+existing design tools, and can help build new tools to replace them. They can
+think critically about these trends using their domain-knowledge, and conduct
+original research with deep connections between the humanities and computer
+science. They can also build a company culture where this talent wants to work,
+with
+[a deep trust in the individual](http://en.wikipedia.org/wiki/Bounded_rationality),
+a relentless pursuit of the sublime, and a belief in failure as a means of
+innovation.
 
-Some [design studios](http://www.sagmeisterwalsh.com) are exploring similar themes in their work, and academic institutions are releasing [publications](https://runemadsen.com/blog/ulrike-felsing-dynamic-identities-in-cultural-and-public-contexts/) focused on dynamic design. It has been a popular topic in independent [design](http://www.dot-dot-dot.us/) [magazines](http://www.servinglibrary.org/) too. Using the word *programmer* is quickly becoming as exhausted as the term *computer operator*, and we will need to grapple with the fact that developers are becoming a creative class – particularly in the design world.
+Some [design studios](http://www.sagmeisterwalsh.com) are exploring similar
+themes in their work, and academic institutions are releasing
+[publications](https://runemadsen.com/blog/ulrike-felsing-dynamic-identities-in-cultural-and-public-contexts/)
+focused on dynamic design. It has been a popular topic in independent
+[design](http://www.dot-dot-dot.us/) [magazines](http://www.servinglibrary.org/)
+too. Using the word _programmer_ is quickly becoming as exhausted as the term
+_computer operator_, and we will need to grapple with the fact that developers
+are becoming a creative class – particularly in the design world.
 
 <div class="thanks"><p>Thanks to <a href="http://gregborenstein.com/">Greg Borenstein</a> for providing valuable feedback on an earlier draft of this post.</p></div>
-
-
-
-

@@ -1,7 +1,7 @@
 ---
-layout:     blog.html
-title:      "I used to be somebody"
-date:       2010-12-16 07:32:00
+layout: blog.hbs
+title: "I used to be somebody"
+date: 2010-12-16 07:32:00
 categories: blog
 ---
 
