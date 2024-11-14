@@ -1,50 +1,58 @@
-var Metalsmith = require("metalsmith");
-var collections = require("metalsmith-collections");
-var layouts = require("metalsmith-layouts");
-var markdown = require("metalsmith-markdown");
-var permalinks = require("metalsmith-permalinks");
-var sass = require("metalsmith-sass");
-var fingerprint = require("metalsmith-fingerprint-ignore");
-var filenameMetadata = require("metalsmith-metadata-in-filename");
-var moment = require("moment");
-var paginate = require("metalsmith-pager");
-var inplace = require("metalsmith-in-place");
-var debug = require("metalsmith-debug");
-var serve = require("metalsmith-serve");
-var production = process.env.NODE_ENV === "production";
+import fs from "fs";
+import path from "path";
+import { performance } from "perf_hooks";
+import Metalsmith from "metalsmith";
+import browserSync from "browser-sync";
+import collections from "@metalsmith/collections";
+import layouts from "@metalsmith/layouts";
+import markdown from "@metalsmith/markdown";
+import permalinks from "@metalsmith/permalinks";
+import fingerprint from "metalsmith-fingerprint";
+import filenameMetadata from "metalsmith-metadata-in-filename";
+import moment from "moment";
+import pagination from "metalsmith-pagination";
+import inplace from "@metalsmith/in-place";
+import debug from "metalsmith-debug";
+import Handlebars from "handlebars";
+
+let devServer = null;
+let t1 = performance.now();
+const isProduction = process.env.NODE_ENV === "production";
 
 // Helpers
 // --------------------------------------------
 
-var Handlebars = require("handlebars");
-Handlebars.registerHelper("formatDate", function(date, format) {
+Handlebars.registerHelper("formatDate", function (date, format) {
   var mmnt = moment(date);
   return mmnt.format(format);
 });
 
-Handlebars.registerHelper("removeFilename", function(str) {
+Handlebars.registerHelper("removeFilename", function (str) {
   return str.substring(0, str.lastIndexOf("/"));
 });
 
-Handlebars.registerHelper("debug", function(obj) {
-  console.log("---> NEW DEBUG");
+Handlebars.registerHelper("debug", function (obj) {
   console.log(obj);
 });
 
-// Defaults
+// Load files
 // --------------------------------------------
 
-var build = Metalsmith(__dirname);
+const partials = {};
 
-if (!production) {
-  build = build.use(
-    serve({
-      port: 1234
-    })
-  );
-}
+const dirname = "./layouts/partials";
+const partialFiles = fs.readdirSync(dirname);
+partialFiles.forEach((filename) => {
+  const content = fs.readFileSync(path.join(dirname, filename), "utf-8");
+  partials[filename.replace(".hbs", "")] = content;
+});
 
-build = build
+const blogPagination = fs.readFileSync("./layouts/partials/blogPagination.hbs");
+
+// Metalsmith
+// --------------------------------------------
+
+let compiler = Metalsmith(import.meta.dirname)
   .use(debug())
   .metadata({
     sitename: "Rune Madsen - Designer, Artist, Educator",
@@ -52,122 +60,120 @@ build = build
     description:
       "Rune Madsen is a designer, artist and educator who uses programming languages to create things with the computer.",
     keyword:
-      "algorithmic, graphic, design, systems, generative, Processing, creative, code, programming, P5.js"
+      "algorithmic, graphic, design, systems, generative, Processing, creative, code, programming, P5.js",
   })
   .source("./src")
   .destination("./build")
   .clean(true)
+  .watch(isProduction ? false : ["src", "layouts"])
   .use(
     collections({
       blog: {
         pattern: "blog/*.md",
         sortBy: "date",
-        reverse: true
+        reverse: true,
       },
       work: {
         pattern: "work/*.md",
         sortBy: "date",
-        reverse: true
+        reverse: true,
       },
       talks: {
         pattern: ["talks/*.md", "talks/*.html"],
         sortBy: "date",
-        reverse: true
+        reverse: true,
       },
       syllabi: {
         pattern: ["syllabi/*.md"],
         sortBy: "date",
-        reverse: true
-      }
-    })
-  )
-  .use(
-    paginate({
-      collection: "blog",
-      elementsPerPage: 5,
-      pagePattern: "blog/page:PAGE/index.html.hbs",
-      index: "blog/index.html.hbs",
-      paginationTemplatePath: "../layouts/partials/blogPagination.html",
-      layoutName: "default.html"
+        reverse: true,
+      },
     })
   )
   .use(
     filenameMetadata({
-      match: "**/*.{md,html}"
+      match: "**/*.{md,html}",
+    })
+  )
+  .use(
+    pagination({
+      "collections.blog": {
+        perPage: 5,
+        first: "blog/index.html.hbs",
+        path: "blog/page:num/index.html.hbs",
+        pageContents: blogPagination,
+        layout: "default.hbs",
+      },
     })
   )
   .use(markdown())
   .use(
-    sass({
-      outputStyle: production ? "compressed" : "expanded"
-    })
-  )
-  .use(
     permalinks({
       relative: false,
-      pattern: ":slug",
       linksets: [
         {
           match: { collection: "blog" },
-          pattern: "blog/:slug"
+          pattern: "blog/:slug",
         },
         {
           match: { collection: "work" },
-          pattern: "work/:slug"
+          pattern: "work/:slug",
         },
         {
           match: { collection: "talks" },
-          pattern: "talks/:slug"
+          pattern: "talks/:slug",
         },
         {
           match: { collection: "syllabi" },
-          pattern: "syllabi/:slug"
-        }
-      ]
+          pattern: "syllabi/:slug",
+        },
+      ],
     })
   )
   // Run handlebars on any individual pages,
   // especially the pagination pages named .html.hbs
   .use(
     inplace({
+      transform: "jstransformer-handlebars",
       engineOptions: {
-        partials: "./layouts/partials",
-        cache: false
-      }
+        partials,
+        cache: false,
+      },
     })
   )
-  .use(fingerprint({ pattern: "css/app.css" }))
+  .use(fingerprint({ pattern: "css/index.css" }))
   .use(
     layouts({
-      engine: "handlebars",
-      partials: "layouts/partials",
-      partialExtension: ".html"
-    })
-  );
-
-if (production) {
-  var htmlMinifier = require("metalsmith-html-minifier");
-
-  build = build.use(
-    htmlMinifier({
-      removeAttributeQuotes: false,
-      removeRedundantAttributes: false
-    })
-  );
-} else {
-  var watch = require("metalsmith-watch");
-  build = build.use(
-    watch({
-      paths: {
-        "src/**/*": true,
-        "layouts/**/*": true,
-        "src/css/*.scss": "**/*"
+      directory: "layouts",
+      default: "default.hbs",
+      engineOptions: {
+        partials,
       },
-      livereload: false
     })
   );
-}
 
-build.build(function(err) {
-  if (err) throw err;
+compiler.build(function (err) {
+  if (err) {
+    throw err;
+  }
+
+  console.log(
+    `Build success in ${((performance.now() - t1) / 1000).toFixed(1)}s`
+  );
+
+  if (compiler.watch()) {
+    if (devServer) {
+      t1 = performance.now();
+      devServer.reload();
+    } else {
+      devServer = browserSync.create();
+      devServer.init({
+        host: "localhost",
+        server: "./build",
+        port: 3000,
+        injectChanges: false,
+        reloadThrottle: 0,
+      });
+    }
+  }
 });

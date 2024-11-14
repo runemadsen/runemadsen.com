@@ -1,0 +1,492 @@
+html,
+body {
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: white;
+  color: #2e2e2e;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* Skeleton
+---------------------------------------------------------*/
+
+iframe {
+  margin-top: 11px;
+  margin-bottom: 11px;
+}
+
+main {
+  width: 100%;
+  margin-top: 30px;
+  padding-bottom: 40px;
+}
+
+main img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+main iframe {
+  max-width: 100%;
+}
+
+/* Menu
+---------------------------------------------------------*/
+
+nav {
+  -webkit-font-smoothing: antialiased;
+  text-transform: uppercase;
+  font-size: 1.3em;
+  font-weight: bold;
+  margin: 25px 0 0 0;
+  text-align: center;
+}
+
+nav a {
+  padding: 0;
+  margin: 0 7px 10px 0;
+  display: inline-block;
+}
+
+nav a:last-child {
+  margin: 0;
+}
+
+nav a,
+nav a:hover,
+nav a:visited {
+  color: #272727;
+}
+
+nav a {
+  display: inline-block;
+  text-decoration: none;
+  transition: margin 200ms, color 400ms;
+}
+
+nav a:hover {
+  color: gray;
+}
+
+/* Overflow classes
+--------------------------------------------------------- */
+
+.wide-750 {
+  margin-bottom: 2em;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+/* Content goes from fluid to 600px fixed
+--------------------------------------------------------- */
+
+@media (min-width: 640px) {
+  body {
+    padding: 0px;
+  }
+
+  main {
+    width: 600px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+/* Menu goes to the left
+--------------------------------------------------------- */
+
+@media (min-width: 790px) {
+  main {
+    margin-left: 150px;
+  }
+
+  nav {
+    font-size: 1.5em;
+    margin: 0;
+    position: fixed;
+    top: 34px;
+    left: 30px;
+    text-align: left;
+  }
+
+  nav a {
+    margin: 0 0 4px 0;
+    display: block;
+  }
+
+  nav a:hover {
+    margin-left: 6px;
+  }
+}
+
+/* Main window flows to the center
+--------------------------------------------------------- */
+
+@media (min-width: 900px) {
+  main {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+/* Wide classes bump out
+--------------------------------------------------------- */
+
+@media (min-width: 1015px) {
+  .wide-750 {
+    margin-left: -75px;
+    margin-right: -75px;
+  }
+}
+
+/* Typography
+---------------------------------------------------------*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-rendering: optimizelegibility;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 1.8em;
+  margin-bottom: 1em;
+  letter-spacing: -0.5;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 1.6em;
+  margin-bottom: 0.8em;
+}
+
+h3 {
+  font-size: 1.1em;
+  line-height: 26px;
+  margin-bottom: 11px;
+}
+
+h4 {
+  font-size: 15px;
+  line-height: 26px;
+}
+
+main p,
+main ul,
+main ol,
+main ul {
+  margin-bottom: 1.2em;
+  line-height: 1.5em;
+  font-size: 1.1em;
+}
+
+main a {
+  text-decoration: none;
+  color: #2e2e2e;
+  border-bottom: 1px solid #545454;
+  transition: color 300ms;
+}
+
+main a:visited {
+  color: #7a4e9c;
+}
+
+main a:hover {
+  color: gray;
+}
+
+a h2 {
+  color: #2e2e2e;
+}
+
+a h2:hover {
+  color: #adadad;
+}
+
+blockquote {
+  padding: 20px;
+  margin: 22px 0px;
+  background-color: #e6e6e6;
+}
+
+main blockquote p {
+  margin: 0;
+  line-height: 1.6em;
+  color: #3a3a3a;
+  font-style: italic;
+}
+
+address {
+  font-weight: bold;
+  font-style: normal;
+  margin-bottom: 15px;
+  line-height: 20px;
+}
+
+ul,
+ol {
+  line-height: 22px;
+  margin: 11px 0px;
+  margin-left: 25px;
+}
+
+ol.bignums {
+  list-style: none;
+  margin-left: 0;
+}
+
+ol.bignums li {
+  clear: both;
+  border-bottom: 1px solid #e8e8e8;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+}
+
+ol.bignums .bignum {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  color: #c3c3c3;
+  display: block;
+  float: left;
+  width: 60px;
+  height: 40px;
+  padding-left: 0.2em;
+  padding-top: 0.3em;
+  font-size: 2.5em;
+}
+
+/* Front
+---------------------------------------------------------*/
+
+#front .wide-750:first-of-type {
+  margin-top: 2.5em;
+}
+
+#front .wide-750 img {
+  float: left;
+  width: 50%;
+}
+
+#front .wide-750:after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+/* Blog
+---------------------------------------------------------*/
+
+.post {
+  margin-bottom: 3em;
+}
+
+.post .time {
+  font-size: 0.9em;
+  margin-bottom: 0.8em;
+  color: #adadad;
+}
+
+/* Page Nav
+------------------------------------------- */
+
+#page-nav {
+  margin-top: 22px;
+  margin-bottom: 33px;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+#page-nav a {
+  color: #2e2e2e;
+}
+
+#page-nav a:hover {
+  color: #adadad;
+}
+
+/* Gist styling
+------------------------------------------- */
+
+.post .gist {
+  margin: 22px 0px;
+  font-size: 0.9em;
+}
+
+.post .gist .gist-file {
+  border: none;
+}
+
+.post .gist .gist-file .gist-data {
+  background-color: #e6e6e6;
+  padding: 10px 15px;
+}
+
+.post .gist .gist-file .gist-highlight {
+  padding: 0;
+}
+
+.post .gist .gist-file .gist-meta {
+  background-color: #e6e6e6;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #bebebe;
+}
+
+.post .gist .gist-file .gist-meta a,
+.post .gist .gist-file .gist-meta a:visited,
+.post .gist .gist-file .gist-meta a:link {
+  text-decoration: none;
+  color: #bebebe !important;
+  border-bottom: none;
+}
+
+.twitter {
+  background-color: #f9f9f9;
+  padding: 15px 20px;
+}
+
+.twitter p {
+  margin: 0;
+  font-family: Helvetica;
+  color: #696969;
+  font-style: italic;
+  font-size: 15px;
+}
+
+.thanks {
+  font-style: italic;
+  font-size: 14px;
+  color: gray;
+  margin: 40px 10px 0px 10px;
+}
+
+/* Info
+---------------------------------------------------------*/
+
+#cv {
+  font-size: 13px;
+}
+
+/* Resume Styling
+------------------------------------------- */
+
+#resume ul {
+  margin: 0;
+  padding: 0;
+  margin-left: 15px;
+  margin-bottom: 22px;
+  font-size: 13px;
+}
+
+#description {
+  font-weight: bold;
+  padding-top: 11px;
+}
+
+/* Work
+---------------------------------------------------------*/
+
+.project {
+  margin-bottom: 3em;
+}
+
+/* Talks
+---------------------------------------------------------*/
+
+.talk {
+  h1 {
+    margin-bottom: 0;
+  }
+
+  h2 {
+    font-weight: normal;
+    font-size: 1.3em;
+  }
+
+  .slide {
+    margin-bottom: 2em;
+
+    .img {
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      margin-bottom: 1em;
+    }
+  }
+}
+
+/* About
+---------------------------------------------------------*/
+
+#about h3 {
+  margin-bottom: 10px;
+}
+
+#about h3 + p {
+  margin: 10px 0;
+}
+
+#about h3 + p + p {
+  margin-top: 10px;
+}
+
+#about ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+#about ul li {
+  margin-bottom: 5px;
+}
+
+/* Print
+---------------------------------------------------------*/
+
+@media print {
+  body {
+    font-size: 0.8em;
+  }
+
+  main {
+    p,
+    ul {
+      line-height: 1.5em;
+      margin-bottom: 0.6em;
+    }
+  }
+
+  address {
+    margin-bottom: 0.4em;
+  }
+
+  h1 {
+    margin-bottom: 0.3em;
+  }
+
+  h2 {
+    margin-top: 0.6em;
+    margin-bottom: 0.4em;
+    padding-bottom: 0.1em;
+    border-bottom: 2px solid #2e2e2e;
+  }
+
+  h3 {
+    margin-bottom: 0;
+    font-size: 1.1em;
+  }
+
+  #menu {
+    display: none;
+  }
+}

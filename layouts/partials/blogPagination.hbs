@@ -1,0 +1,18 @@
+<h1>Blog</h1>
+
+{{#each pagination.files}}
+  <section class="post">
+    <div class="time">{{formatDate date "DD MMMM, YYYY" }}</div>
+    <a href="/blog/{{ this.slug }}"><h2>{{ this.title }}</h2></a>
+    {{{ this.contents }}}
+  </section>
+{{/each}}
+
+<div id="page-nav">
+  {{#if pagination.previous}}
+    <a href="/{{removeFilename pagination.previous.path}}">Newer Posts</a>&nbsp;&nbsp;
+  {{/if}}
+  {{#if pagination.next}}
+    <a href="/{{removeFilename pagination.next.path}}">Older Posts</a>&nbsp;&nbsp;
+  {{/if}}
+</div>
