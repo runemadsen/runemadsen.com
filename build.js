@@ -13,6 +13,7 @@ import moment from "moment";
 import pagination from "metalsmith-pagination";
 import inplace from "@metalsmith/in-place";
 import debug from "metalsmith-debug";
+import sitemap from "metalsmith-sitemap";
 import Handlebars from "handlebars";
 
 let devServer = null;
@@ -152,6 +153,15 @@ let compiler = Metalsmith(import.meta.dirname)
       },
     })
   );
+
+if (isProduction) {
+  compiler = compiler.use(
+    sitemap({
+      hostname: "https://runemadsen.com",
+      omitIndex: true,
+    })
+  );
+}
 
 compiler.build(function (err) {
   if (err) {
