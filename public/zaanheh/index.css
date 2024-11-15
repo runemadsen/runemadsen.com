@@ -1,0 +1,226 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: #232323;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Lora", serif;
+}
+
+h1 {
+  font-size: 2.2em;
+}
+
+h2 {
+  font-size: 1.15em;
+}
+
+p,
+ul {
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 1.6em;
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+
+a {
+  text-decoration: none;
+  color: #232323;
+}
+
+ul {
+  padding-left: 18px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+header {
+  background-color: #f5f9fd;
+  text-align: center;
+  background-image: url(assets/shanghai.jpg);
+  background-size: 100%;
+  background-position: center bottom;
+  min-height: 490px;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+#logo {
+  font-size: 20px;
+  font-weight: 400;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  color: white;
+  background-color: #161616;
+  padding: 10px 18px;
+}
+
+.menu {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: #161616;
+  font-family: "Lora", sans-serif;
+  font-weight: bold;
+  padding: 13px 20px;
+  margin: 0;
+  list-style-type: none;
+  font-size: 18px;
+}
+
+.menu li {
+  margin: 0;
+  padding: 0;
+}
+
+.menu li a {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+}
+
+/* Blocks
+----------------------------------------------------- */
+
+.block {
+  padding: 25px;
+  padding-bottom: 40px;
+}
+
+.block h1 {
+  border-bottom: 2px solid #232323;
+  padding-bottom: 14px;
+}
+
+.block a {
+  color: #222d23;
+  border-bottom: 1px solid #d7d7d7;
+}
+
+.invert {
+  background-color: rgb(22, 22, 22);
+  color: #eceff4;
+}
+
+.block.invert h1 {
+  border-color: white;
+}
+
+.invert a {
+  color: #e7e7e7;
+  border-bottom: 1px solid #828282;
+}
+
+.max {
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#contact {
+  text-align: center;
+}
+
+#contact p {
+  font-size: 1.2em;
+}
+
+#nyushlogo {
+  max-width: 300px;
+}
+
+time {
+  font-size: 14px;
+  color: #828282;
+}
+
+.news-item {
+  margin-bottom: 30px;
+}
+
+@media (min-width: 470px) {
+  .block h1 {
+    padding-left: 20px;
+    margin-bottom: 35px;
+  }
+
+  .block p {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media (min-width: 700px) {
+  header {
+    padding-top: 20px;
+    min-height: 100vh;
+  }
+
+  #logo {
+    font-size: 28px;
+  }
+
+  .menu li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  .menu li:last-child {
+    margin-right: 0;
+  }
+
+  .cols {
+    column-count: 2;
+  }
+
+  .cols ul {
+    margin-top: 0;
+  }
+
+  .cols h2 {
+    margin-bottom: 15px;
+  }
+}
+
+@media (min-width: 950px) {
+  .block h1 {
+    font-size: 42px;
+  }
+
+  header {
+    font-size: 1.1em;
+  }
+
+  .block {
+    padding: 65px 0 85px 0;
+  }
+
+  p {
+    font-size: 19px;
+  }
+}
+
+@media (min-width: 1200px) {
+  header {
+    min-height: 110vh;
+  }
+}

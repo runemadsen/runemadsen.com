@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: FGrotesk;
+  src: url("assets/FGroteskBook.woff");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: FGrotesk;
+  src: url("assets/FGroteskBook.woff");
+  font-weight: bold;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: "FGrotesk";
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+}
+
+.logo {
+  max-width: 320px;
+}
+
+p {
+  line-height: 1.4em;
+  margin: 0;
+}
+
+h2 {
+  margin-bottom: 0.4em;
+}
+
+header p {
+  max-width: 720px;
+  font-size: 20px;
+}
+
+.cols {
+  margin-bottom: 20px;
+}
+
+header.cols {
+  margin-bottom: 40px;
+}
+
+.cols > div:first-child {
+  margin-bottom: 15px;
+}
+
+.cols a img {
+  margin-bottom: 20px;
+}
+
+@media (min-width: 1000px) {
+  body {
+    padding: 40px;
+  }
+
+  h2 {
+    margin-top: 0;
+  }
+
+  .cols {
+    display: flex;
+  }
+
+  .cols > div:first-child {
+    margin-bottom: 0;
+    flex: 0 0 350px;
+    padding-right: 40px;
+  }
+
+  .cols > div:last-child {
+    flex: 1;
+  }
+}

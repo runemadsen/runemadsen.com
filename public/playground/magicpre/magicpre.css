@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+}
+
+div.comment {
+  padding-right: 2em;
+}
+
+pre.code {
+  margin: 0;
+  font-family: 'AtlasTypewriter-Regular';
+  font-size: 1.05em;
+  background-color: #333;
+  line-height: 1.4em;
+}
+
+#one, #three {
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#one pre.code, #two pre.code,
+#three pre.code, #three pre.code {
+  padding: 0.8em 1em;
+}
+
+#two .wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#two div.comment {
+  flex: 0 0 50%;
+  border-top: 1px dashed gray;
+}
+
+#two div.comment p {
+  margin-top: 0;
+}
+
+#two pre.code {
+  flex: 0 0 50%;
+  border-top: 1px dashed gray;
+  padding: 0 1em;
+}
+
+#two pre.code:first-of-type{
+  padding-top: 0.8em;
+}
+
+#two pre.code:last-of-type {
+  padding-bottom: 0.8em;
+}

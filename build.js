@@ -13,6 +13,7 @@ import moment from "moment";
 import pagination from "metalsmith-pagination";
 import inplace from "@metalsmith/in-place";
 import debug from "metalsmith-debug";
+import staticFiles from "metalsmith-static-files";
 import sitemap from "metalsmith-sitemap";
 import Handlebars from "handlebars";
 
@@ -151,6 +152,12 @@ let compiler = Metalsmith(import.meta.dirname)
       engineOptions: {
         partials,
       },
+    })
+  )
+  .use(
+    staticFiles({
+      source: "public",
+      destination: ".",
     })
   );
 

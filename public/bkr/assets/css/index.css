@@ -1,0 +1,210 @@
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Courier", monospace;
+  background-color: #F7F7F7;
+  color: #252525;
+  letter-spacing: -0.02em;
+}
+
+/* Typography
+------------------------------------------ */
+
+h1, h2, h3 {
+  letter-spacing: -0.03em;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 1.9em;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+p {
+  line-height: 1.3em;
+}
+
+p.large {
+  font-size: 1.2em;
+  line-height: 1.2em;
+}
+
+img {
+  width: 100%;
+}
+
+@media (min-width: 850px) {
+  h1 { font-size: 2.2em; }
+  h2 { font-size: 1.6em; }
+}
+
+/* Nav
+------------------------------------------ */
+
+nav {
+  padding-top: 20px;
+  background-color: blue;
+}
+
+nav .btn {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.red nav {
+  background-color: red;
+}
+
+/* Section headers
+------------------------------------------ */
+
+section header {
+  padding: 100px 25px 40px 25px;
+  background-color: blue;
+  color: white;
+  margin-bottom: 40px;
+  border-bottom: 5px dashed #F7F7F7;
+}
+
+section header a {
+  color: yellow;
+}
+
+.red section header {
+  background-color: red;
+}
+
+/* Classes
+------------------------------------------ */
+
+.class {
+  margin-bottom: 30px;
+  padding-bottom: 40px;
+  border-bottom: 1px dashed #252525;
+}
+
+.class:last-child {
+  border-bottom: none;
+}
+
+.class:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.class h2 {
+  margin-top: 0;
+  margin-bottom: 0.4em;
+}
+
+.class .time {
+  margin-top: 0;
+  font-size: 0.9em;
+}
+
+.class .time .price {
+  font-weight: bold;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+@media (min-width: 850px) {
+  .class img {
+    float: left;
+    width: 45%;
+  }
+
+  .class .class-info {
+    float: right;
+    width: 50%;
+  }
+
+  .class .class-info p:first-child {
+    margin-top: 0;
+  }
+}
+
+/* FAQ
+------------------------------------------ */
+
+.question h2, .question p {
+  max-width: 750px;
+}
+
+/* Buttons
+------------------------------------------ */
+
+.btn {
+  background-color: white;
+  border: 2px solid blue;
+}
+
+.btn a {
+  font-size: 1.15em;
+  margin: 2px;
+  border: 1px dotted blue;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  padding: 0.95em 2em;
+}
+
+.btn a:visited {
+  color: blue;
+}
+
+.btn.small {
+  font-size: 0.95em;
+}
+
+.btn.small a {
+  padding: 0.6em 1em;
+}
+
+.btn.invert {
+  background-color: transparent;
+  border-color: white;
+}
+
+.btn.invert a {
+  color: white;
+  border-color: white;
+  font-weight: bold;
+}
+
+/* Helpers
+------------------------------------------ */
+
+p.m-wide {
+  max-width: 650px;
+}
+
+p.l-wide {
+  max-width: 750px;
+}
+
+.padding {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.container {
+  max-width: 950px;
+  margin-left: auto;
+  margin-right: auto;
+}

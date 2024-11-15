@@ -1,0 +1,152 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Droid Serif', Georgia, serif;
+  font-size: 100%;
+  color: #333333;
+}
+
+/* Typography ------------------------------------------- */
+
+h1, h2, h3, h4, h5, nav {
+  font-family: 'Droid Sans', sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+
+/* General ------------------------------------------- */
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.block {
+  text-align: left;
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.block .txt {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2em;
+  background-image: linear-gradient(rgba(0, 0, 0, 0),#000 100%);
+}
+
+.block .txt h2 {
+  margin: 0;
+}
+
+.block .txt p {
+  margin-top: 0.5em;
+  font-size: 1.1em;
+  line-height: 1.5em;
+}
+
+.block .txt a {
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px dashed #a4a4a4;
+}
+
+.block img {
+  width: 100%;
+}
+
+.parent {
+  text-align: center;
+  overflow: hidden;
+  margin-top: 5px;
+  color: white;
+  padding: 6em 0;
+  position: relative;
+}
+
+.background {
+  background-color: #000000;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.background div {
+  width: 100%;
+  height: 100%;
+  background-size: 100%;
+  opacity: 0.6;
+  filter: blur(15px);
+}
+
+/* Navigation ------------------------------------------- */
+
+nav {
+  -webkit-font-smoothing: antialiased;
+  text-transform: uppercase;
+  padding: 25px 0;
+  font-size: 1.1em;
+}
+
+nav a {
+  color: #333333;
+  display: inline-block;
+  margin-right: 30px;
+  text-decoration: none;
+}
+
+/* About ------------------------------------------- */
+
+#about .background div {
+  background-image: url('images/drenge.jpg');
+}
+
+#about img {
+  vertical-align: bottom;
+  max-width: 190px;
+  border-radius: 50%;
+}
+
+#about p {
+  text-align: left;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  display: inline-block;
+  max-width: 650px;
+  font-size: 1.7em;
+  line-height: 1.35em;
+  margin-left: 70px;
+}
+
+/* Academics ------------------------------------------- */
+
+#academics .background div {
+  background-image: url('images/cells.jpg');
+}
+
+/* Code ------------------------------------------- */
+
+#code .background div {
+  background-image: url('images/code.jpg');
+}
+
+/* Contact ------------------------------------------- */
+
+#contact .background div {
+  background-image: url('images/torben.jpg');
+}

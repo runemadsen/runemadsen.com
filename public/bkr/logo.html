@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      body {
+        font-size: 100%;
+        line-height: 1em;
+      }
+      #logo {
+        line-height: 0.9em;
+        -webkit-font-smoothing: antialiased;
+        font-family: 'Courier New', monospace;
+        font-size: 80px;
+        color: white;
+      }
+       #logo u {
+         padding: 0 0.15em;
+         line-height: 0.9em;
+         margin: 1px;
+         display: inline-block;
+         background-color: blue;
+         text-decoration: none;
+       }
+    </style>
+  </head>
+  <body>
+    <div id="logo">
+      <div><u>B</u><u>R</u><u>O</u><u>O</u><u>K</u><u>L</u><u>Y</u><u>N</u></div>
+      <div><u>R</u><u>E</u><u>S</u><u>E</u><u>A</u><u>R</u><u>C</u><u>H</u></div>
+    </div>
+    <script type="text/javascript">
+      function Ease(t) { return t*t }
+      var els = document.querySelectorAll('u');
+      function shift() {
+        var chars = [];
+        for(var i = 0; i < els.length; i++) chars.push(els[i].innerHTML);
+        chars.push(chars.shift());
+        for(var i = 0; i < chars.length; i++) els[i].innerHTML = chars[i];
+      }
+      for(var i = 0; i < 1; i += 1/64)  setTimeout(shift, Ease(i) * 3500);
+    </script>
+  </body>
+</html>
