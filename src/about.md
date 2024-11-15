@@ -135,53 +135,119 @@ media and the interplay between these and society.
 
 ## Talks
 
-- _August 2019_ - Clarity Conference, San Francisco
-- _March 2019_ - The Royal Danish Academy of Fine Arts, Copenhagen
-- _March 2019_ - Interactive Telecommunications Program, NYU
-- _February 2019_ - Brooklyn Research
-- _February 2019_ - Copenhagen Institute of Interaction Design
-- _February 2019_ - Processing Community Day Copenhagen
-- _January 2019_ -
-  [Processing Community Day London](/talks/processing-community-day-london/)
-- _2018_ - Berlingske Media
-- _2017_ - Office of Creative Research
-- _2017_ - [UX Camp Copenhagen](/talks/uxcampcph/)
-- _2017_ - Harvard University
-- _2017_ - O'Reilly Design Conference
-- _2017_ - Queens College
-- _2016_ - Bjerg and Dahl workshop, Copenhagen
-- _2016_ - [Design Matters Conference](/talks/programming-design-systems/),
-  Copenhagen
-- _2015_ - Artist Talk, Hofstra University
-- _2015_ - Society for News Design Scandinavia Conference
-- _2015_ - Danish Broadcasting Corporation
-- _2015_ - Danish Online News Association
-- _2014_ - Anderson Ranch
-- _2014_ - Danish Online News Association
-- _2014_ - TV2 Denmark
-- _2013_ - Studio 20, NYU School of Journalism
-- _2013_ - Pratt Institute
-- _2013_ - [Heroku Waza](/talks/waza-programming-and-the-visual-arts/)
-- _2012_ - NYU Computer Science
-- _2011_ - Maryland Institute College of Art
-- _2011_ - Interactive Telecommunications Program, NYU
-- _2010_ - New Media Days, Copenhagen
-- _2010_ - Pratt Institute
+### 2024
+
+- Grid Conference, DR, Copenhagen
+- School of Visual Arts, New York City
+- MongoDB Product UX Fest, New York City
+- Royal Danish Academmy of Arts, Copenhagen
+
+### 2023
+
+- Ørsted, Copenhagen
+- Royal Danish Academmy of Arts, Copenhagen
+- Visual Design for Human Computer Interaction, University of Maryland,
+  Washington D.C.
+
+### 2022
+
+- Integrated Design & Media, New York University, New York City
+- Interactive Media Arts Low Res, New York University, New York City
+
+### 2021
+
+- Rockwell Group, New York City
+- ReD Asscoiates, Copenhagen
+- Gallagher, New York City
+- Design Matter, Copenhagen
+
+### 2019
+
+- Clarity Conference, San Francisco
+- The Royal Danish Academy of Fine Arts, Copenhagen
+- Interactive Telecommunications Program, New York University, New York City
+- Brooklyn Research, New York City
+- Copenhagen Institute of Interaction Design, Copehagen
+- Processing Community Day Copenhagen, Copenhagen
+- [Processing Community Day London](/talks/processing-community-day-london/),
+  London
+- Red Associates, New York City
+
+### 2018
+
+- Berlingske Media, Copenhagen
+
+### 2017
+
+- Office of Creative Research, New York City
+- [UX Camp Copenhagen](/talks/uxcampcph/), Copenhagen
+- Harvard University, Boston
+- O'Reilly Design Conference, New York City
+- Queens College, New York City
+
+### 2016
+
+- Bjerg and Dahl workshop, Copenhagen
+- [Design Matters](/talks/programming-design-systems/), Copenhagen
+
+### 2015
+
+- Hofstra University, New York City
+- Society for News Design Scandinavia Conference, Copenhagen
+- Danish Broadcasting Corporation, Copenhagen
+- Danish Online News Association, Copenhagen
+
+### 2014
+
+- Anderson Ranch, Colorado
+- Danish Online News Association, Copenhagen
+- TV2 Denmark, Copenhagen
+
+### 2013
+
+- Studio 20, School of Journalism, New York University, New York City
+- Pratt Institute, New York City
+- [Heroku Waza](/talks/waza-programming-and-the-visual-arts/), San Francisco
+
+### 2012
+
+- Computer Science, New York University, New York City
+
+### 2011
+
+- Maryland Institute College of Art, Baltimor
+- Interactive Telecommunications Program, New York University, New York City
+
+### 2010
+
+- New Media Days, Copenhagen
+- Pratt Institute, New York City
 
 ## Commissions
 
-- _2016_ - Tiny Artist 7, Bunker Gallery, New York City
-- _2013_ - The Artist is not Present, SP Urban Digital Festival, Sao Paulo
-- _2013_ - Tiny Artists 4-6, TEMP Gallery, New York City
-- _2013_ - Tiny Artist 1-3, Dumbo Arts Festival, New York City
-- _2011_ - Balloon Projections Performance by Oh Land on David Letterman Jimmy
-  Kimmel Live, and at the Danish Grammy's
-- _2011_ - People Watching Plus Featured in The Antics Roadshow documentary
-  directed by Banksy
-- _2011_ - Site-specific installation, TV of Tomorrow Gallery, New York City
-- _2011_ - Site-specific installation, Monitor Digital festival, Guadalajara
-- _2011_ - Site-specific installation, Charles Bank Gallery, New York City
-- _2011_ - Site-specific installation, Vimeo Festival Gallery, New York City
-- _2010_ - Site-specific installation, CodeConf, San Francisco
+### 2016
+
+- Tiny Artist 7, Bunker Gallery, New York City
+
+### 2013
+
+- The Artist is not Present, SP Urban Digital Festival, Sao Paulo
+- Tiny Artists 4-6, TEMP Gallery, New York City
+- Tiny Artist 1-3, Dumbo Arts Festival, New York City
+
+### 2011
+
+- Balloon Projections Performance by Oh Land on David Letterman
+- Balloon Projections Performance by Oh Land on Jimmy Kimmel Live
+- Balloon Projections Performance by Oh Land at the Danish Grammy's
+- People Watching Plus Featured in The Antics Roadshow by Banksy
+- Site-specific installation, TV of Tomorrow Gallery, New York City
+- Site-specific installation, Monitor Digital festival, Guadalajara
+- Site-specific installation, Charles Bank Gallery, New York City
+- Site-specific installation, Vimeo Festival Gallery, New York City
+
+### 2010
+
+- Site-specific installation, CodeConf, San Francisco
 - Other recognition includes press coverage in Vogue, Buzzfeed, Mashable, Make,
   Engadget, Adafruit, Techcrunch, Gizmodo, and Laughing Squid
