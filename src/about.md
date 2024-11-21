@@ -31,7 +31,7 @@ Online.
 
 ### New York University Shanghai
 
-_Assistant Arts Professor. September 2017 – Present._
+_Assistant Arts Professor. September 2017 – December 2018._
 
 Professor at the Interactive Media Arts Program at New York University Shanghai,
 the first sino-US joint venture university in China. Researched focused on
