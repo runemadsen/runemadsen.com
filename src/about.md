@@ -159,7 +159,7 @@ media and the interplay between these and society.
 - Rockwell Group, New York City
 - ReD Asscoiates, Copenhagen
 - Gallagher, New York City
-- Design Matter, Copenhagen
+- Design Matters, Copenhagen
 
 ### 2019
 
